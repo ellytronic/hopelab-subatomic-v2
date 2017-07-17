@@ -140,6 +140,7 @@ gulp.task('serve', () => {
     },
     notify: false,
     logPrefix: 'FABRICATOR',
+    open: false,
   });
 
   gulp.task('assembler:watch', ['assembler'], browserSync.reload);
