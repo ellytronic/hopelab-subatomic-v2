@@ -2,6 +2,17 @@
  * Toolkit styles
  */
 
+@import "bourbon/core/bourbon";
+@import "bourbon-neat/core/neat";
+
 body {
   font-family: sans-serif;
+}
+
+.block {
+  @include grid-container;
+}
+
+.block-image, .block-content {
+  @include grid-column(6);
 }

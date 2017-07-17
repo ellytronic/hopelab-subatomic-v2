@@ -919,6 +919,14 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bourbon-neat@^2, bourbon-neat@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bourbon-neat/-/bourbon-neat-2.1.0.tgz#b32ce101f447c35c57b6e833de74567f8b5f9082"
+
+bourbon@^5.0.0-beta.7:
+  version "5.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-5.0.0-beta.8.tgz#46981c3b072014367217b8074af1efc5b4c5df76"
+
 brace-expansion@^1.0.0, brace-expansion@^1.1.7:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.8.tgz#c07b211c7c952ec1f8efd51a77ef0d1d3990a292"
@@ -3907,6 +3915,12 @@ ncname@1.0.x:
   resolved "https://registry.yarnpkg.com/ncname/-/ncname-1.0.0.tgz#5b57ad18b1ca092864ef62b0b1ed8194f383b71c"
   dependencies:
     xml-char-classes "^1.0.0"
+
+neat-omega@^2.0.7:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/neat-omega/-/neat-omega-2.0.9.tgz#420917e249069968c52824df855945f3133f38ef"
+  dependencies:
+    bourbon-neat "^2"
 
 negotiator@0.6.1:
   version "0.6.1"
