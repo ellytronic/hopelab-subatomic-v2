@@ -1,0 +1,95 @@
+////
+/// Breakpoints
+////
+
+// Breakpoint Boundaries
+
+/// Lower Boundary for extra small screens
+$screen-xs-min:               0px !default;
+
+/// Lower boundary for small screens
+$screen-sm-min:               576px !default;
+
+/// Lower boundary for medium screens
+$screen-md-min:               768px !default;
+
+/// Lower boundary for large screens
+$screen-lg-min:               992px !default;
+
+/// Maximum container width
+$max-container-width:         1300px !default;
+
+/// Lower boundary for extra large screens
+$screen-xl-min:               $max-container-width !default;
+
+/// Upper boundary for extra small screens
+$screen-xs-max:               $screen-sm-min - 1px !default;
+
+/// Upper boundary for small screens
+$screen-sm-max:               $screen-md-min - 1px !default;
+
+/// Upper boundary for medium screens
+$screen-md-max:               $screen-lg-min - 1px !default;
+
+/// Upper boundary for large screens
+$screen-lg-max:               $screen-xl-min - 1px !default;
+
+// Neat Media Queries
+
+$media-xs: (
+    media: $screen-xs-min,
+) !default;
+
+$media-xs-only: (
+    media: 'only screen and (max-width: #{$screen-xs-max})',
+) !default;
+
+$media-xs-max: (
+    media: 'only screen and (max-width: #{$screen-xs-max})',
+) !default;
+
+$media-sm: (
+    media: $screen-sm-min,
+) !default;
+
+$media-sm-only: (
+    media: 'only screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})',
+) !default;
+
+$media-sm-max: (
+    media: 'only screen and (max-width: #{$screen-sm-max})',
+) !default;
+
+$media-md: (
+    media: $screen-md-min,
+) !default;
+
+$media-md-only: (
+    media: 'only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})',
+) !default;
+
+$media-md-max: (
+    media: 'only screen and (max-width: #{$screen-md-max})',
+) !default;
+
+$media-lg: (
+    media: $screen-lg-min,
+) !default;
+
+$media-lg-only: (
+    media: 'only screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max})',
+) !default;
+
+$media-lg-max: (
+    media: 'only screen and (max-width: #{$screen-lg-max})',
+) !default;
+
+$media-xl: (
+    media: $screen-xl-min,
+) !default;
+
+$media-print: (
+    columns: 12,
+    gutter: .25in,
+    media: 'only print',
+) !default;
