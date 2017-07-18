@@ -6,10 +6,6 @@
 @import "utilities/utilities";
 @import "base/base";
 
-body {
-  font-family: sans-serif;
-}
-
 .block {
   @include grid-container;
 }
