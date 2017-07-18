@@ -23,11 +23,11 @@ a {
 
   &:hover,
   &:active {
-    // color: $color-primary-darker;
+    color: color(primary-darker);
   }
 
   &:visited {
-    // color: $color-visited;
+    color: color(secondary-darker);
   }
 
   &:focus {
@@ -116,18 +116,18 @@ dfn {
 }
 
 .background-dark {
-  // background-color: $color-gray-dark;
+  background-color: color(gray-dark);
 
   p,
   span {
-    // color: $color-white;
+    color: color(white);
   }
 
   a {
-    // color: $color-gray-lighter;
+    color: color(gray-lighter);
 
     &:hover {
-      // color: $color-white;
+      color: color(white);
     }
   }
 }
