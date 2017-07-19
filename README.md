@@ -1,4 +1,4 @@
-# sf-cornerstone
+# subatomic
 
 ## Quick Start
 
