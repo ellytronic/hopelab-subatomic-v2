@@ -2,5 +2,58 @@
 /// Buttons
 ////
 
-$button-stroke: inset 0 0 0 2px !default;
-$focus-shadow: 0 0 3px color(focus), 0 0 7px color(focus) !default;
+/// Font family for button elements.
+$button-font-family: inherit !default;
+
+/// Padding inside buttons.
+$button-padding: 0.85em 1em !default;
+
+/// Margin around buttons.
+$button-margin: 0 0 1em 0 !default;
+
+/// Default fill for buttons. Can either be `solid` or `hollow`.
+$button-fill: solid !default;
+
+/// Default background color for buttons.
+$button-background: color(primary) !default;
+
+/// Background color on hover for buttons.
+$button-background-hover: scale-color($button-background, $lightness: -15%) !default;
+
+/// Font color for buttons.
+$button-color: color(white) !default;
+
+/// Alternative font color for buttons.
+$button-color-alt: color(black) !default;
+
+/// Border radius for buttons, defaulted to global-radius.
+$button-radius: $border-radius !default;
+
+/// Border width for hollow outline buttons
+$button-hollow-border-width: 2px !default;
+
+/// Sizes for buttons.
+$button-sizes: (
+  tiny: 0.75rem,
+  small: 1rem,
+  default: 1.6rem,
+  large: 2rem,
+) !default;
+
+/// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
+$button-palette: (
+  primary:                      #004fdc,
+  secondary:                    #e31c3d,
+) !default;
+
+/// opacity for a disabled button.
+$button-opacity-disabled: 0.25 !default;
+
+/// Background color lightness on hover for buttons.
+$button-background-hover-lightness: -20% !default;
+
+/// Color lightness on hover for hollow buttons.
+$button-hollow-hover-lightness: -50% !default;
+
+/// transitions for buttons.
+$button-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
