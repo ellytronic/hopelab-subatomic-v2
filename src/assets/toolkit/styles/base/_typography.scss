@@ -84,7 +84,7 @@ dfn {
 
 // Custom typography
 
-.t-content {
+.text-content {
   p,
   ul,
   ol {
@@ -92,7 +92,7 @@ dfn {
   }
 }
 
-.t-sans {
+.text-sans {
   p,
   a,
   li,
@@ -106,7 +106,7 @@ dfn {
   }
 }
 
-.t-serif {
+.text-serif {
   p,
   a,
   li,
@@ -132,7 +132,7 @@ dfn {
   }
 }
 
-.t-small {
+.text-small {
   font-size: $h6-font-size;
   margin-top: 0;
 }

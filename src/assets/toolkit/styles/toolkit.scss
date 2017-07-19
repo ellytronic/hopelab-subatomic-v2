@@ -11,5 +11,7 @@
 }
 
 .block-image, .block-content {
-  @include grid-column(6);
+  @include grid-media($media-md) {
+    @include grid-column(6);
+  }
 }

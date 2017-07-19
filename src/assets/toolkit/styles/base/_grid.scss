@@ -1,0 +1,49 @@
+////
+/// Grid
+////
+
+// Grid container
+.row {
+  @include grid-container;
+  // max-width: $max-container-width;
+}
+
+// Grid items
+
+.small {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      @include grid-column($i);
+    }
+  }
+}
+
+@include grid-media($media-md) {
+  .medium {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        @include grid-column($i);
+      }
+    }
+  }
+}
+
+@include grid-media($media-lg) {
+  .large {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        @include grid-column($i);
+      }
+    }
+  }
+}
+
+@include grid-media($media-xl) {
+  .xlarge {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        @include grid-column($i);
+      }
+    }
+  }
+}
