@@ -5,7 +5,7 @@
 // Grid container
 .row {
   @include grid-container;
-  // max-width: $max-container-width;
+  max-width: $max-container-width;
 }
 
 // Grid items
@@ -43,6 +43,45 @@
     @for $i from 1 through 12 {
       &-#{$i} {
         @include grid-column($i);
+      }
+    }
+  }
+}
+
+// Grid Push
+.small-offset {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      @include grid-push($i);
+    }
+  }
+}
+
+@include grid-media($media-md) {
+  .medium-offset {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        @include grid-push($i);
+      }
+    }
+  }
+}
+
+@include grid-media($media-lg) {
+  .large-offset {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        @include grid-push($i);
+      }
+    }
+  }
+}
+
+@include grid-media($media-xl) {
+  .xlarge-offset {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        @include grid-push($i);
       }
     }
   }

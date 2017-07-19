@@ -13,7 +13,7 @@
 /// @requires {variable} $colors
 
 @function color($color, $palette: ()) {
-  // First, we marge this default color palette with the decanter color palette we set up in `variables/color`
+  // First, we marge this default color palette with the cornerstone color palette we set up in `variables/color`
   $_default-color-palette: map-merge((
     // Branded color palette
       primary:                      #0071bc,
@@ -67,7 +67,7 @@
 
   // Finally, we return the requested color value from our combined merge. This allows custom color maps to be able to
   // only specify colors that we want to specifically differ from the base map.
-  // As an example, the decanter color map does not include any of the generic colors, but if I created a custom map
+  // As an example, the cornerstone color map does not include any of the generic colors, but if I created a custom map
   // that only had a `background: #880000` value, I could still call `color: color(brand, $custom-map)`, which
   // would return the brand value from the `$colors` map. Additionally, if I call `color: color(lime, $custom-map)`
   // it will return the lime color from the generic palette from the default map.
