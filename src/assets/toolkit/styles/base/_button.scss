@@ -147,10 +147,8 @@ button,
     padding: 1.5rem 3rem;
   }
 }
-/* stylelint-disable */
 
-.button:disabled,
-.button-disabled {
+@mixin button-disabled {
   background-color: color(gray-lighter);
   color: color(gray-dark);
   pointer-events: none;
@@ -165,6 +163,11 @@ button,
     box-shadow: none;
     color: color(gray-dark);
   }
+}
+
+.button:disabled,
+.button-disabled {
+  @include button-disabled;
 }
 
 @mixin button-unstyled {
