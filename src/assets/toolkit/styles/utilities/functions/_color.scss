@@ -59,7 +59,8 @@
     // 
 
       focus:                        #3e94cf,
-      visited:                      #4c2c92
+      visited:                      #4c2c92,
+      shadow:                rgba(#000, 0.3),
   ), $colors);
 
   // Then, we merge the $_default-color-palette we just merged with the palette that was specified by the mixin.

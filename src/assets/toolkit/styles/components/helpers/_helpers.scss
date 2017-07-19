@@ -1,0 +1,11 @@
+////
+/// Helpers
+////
+
+.sr-only-text {
+  @include sr-only-text();
+}
+
+.sr-only-element {
+  @include sr-only-element();
+}

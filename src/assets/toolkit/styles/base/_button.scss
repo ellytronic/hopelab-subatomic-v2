@@ -1,0 +1,188 @@
+// Buttons variables
+
+// Buttons
+
+.button,
+.button-primary,
+.button:visited,
+.button-primary:visited,
+button,
+[type=button],
+[type=submit],
+[type=reset],
+[type=image] {
+  @include font-smoothing;
+  @include margin(0.5em 0.5em 0.5em null);
+  appearance: none;
+  background-color: color(primary);
+  border: 0;
+  border-radius: $border-radius;
+  color: color(white);
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  font-weight: $font-bold;
+  line-height: 1;
+  outline: none;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  @include grid-media($media-sm) {
+    width: auto;
+  }
+
+  &:hover,
+  &.button-hover {
+    background-color: color(primary-darker);
+    border-bottom: 0;
+    color: color(white);
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.button-focus {
+    box-shadow: $focus-shadow;
+  }
+
+  &:active,
+  &.button-active {
+    background-color: color(primary-darkest);
+  }
+
+  &.button-primary-alt {
+    background-color: color(primary-alt);
+    color: color(base);
+
+    &:hover,
+    &.usa-button-hover {
+      background-color: color(primary-alt-dark);
+    }
+
+    &:active,
+    &.usa-button-active {
+      background-color: color(primary-alt-darkest);
+      color: color(white);
+    }
+  }
+
+  &.button-secondary {
+    background-color: color(secondary);
+
+    &:hover,
+    &.button-hover {
+      background-color: color(secondary-dark);
+    }
+
+    &:active,
+    &.button-active {
+      background-color: color(secondary-darkest);
+    }
+  }
+
+  &.button-gray {
+    background-color: color(gray);
+
+    &:hover,
+    &.button-hover {
+      background-color: color(gray-dark);
+    }
+
+    &:active,
+    &.button-active {
+      background-color: color(base);
+    }
+  }
+
+  &.button-outline {
+    background-color: color(white);
+    box-shadow: $button-stroke color(primary);
+    color: color(primary);
+
+    &:hover,
+    &.button-hover {
+      box-shadow: $button-stroke color(primary-darker);
+      color: color(primary-darker);
+    }
+
+    &:active,
+    &.button-active {
+      box-shadow: $button-stroke color(primary-darkest);
+      color: color(primary-darkest);
+    }
+
+    &:focus,
+    &.button-focus {
+      box-shadow: $button-stroke color(primary-darkest), $focus-shadow;
+    }
+  }
+
+  &.button-outline-inverse {
+    background: transparent;
+    box-shadow: $button-stroke color(white);
+    color: color(white);
+
+    &:hover,
+    &.button-hover {
+      box-shadow: $button-stroke color(gray-lighter);
+      color: color(gray-lighter);
+    }
+
+    &:active,
+    &.button-active {
+      box-shadow: $button-stroke color(gray-light);
+      color: color(gray-lighter);
+    }
+
+    &:focus,
+    &.button-focus {
+      box-shadow: $button-stroke color(gray-light), $focus-shadow;
+    }
+  }
+
+  &.button-big {
+    font-size: 1.9rem;
+    padding: 1.5rem 3rem;
+  }
+}
+/* stylelint-disable */
+
+.button:disabled,
+.button-disabled {
+  background-color: color(gray-lighter);
+  color: color(gray-dark);
+  pointer-events: none;
+
+  &:hover,
+  &.button-hover,
+  &:active,
+  &.button-active,
+  &:focus {
+    background-color: color(gray-lighter);
+    border: 0;
+    box-shadow: none;
+    color: color(gray-dark);
+  }
+}
+
+@mixin button-unstyled {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  font-weight: $font-normal;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-align: left;
+  -webkit-font-smoothing: auto;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.button-unstyled {
+  @include button-unstyled;
+}

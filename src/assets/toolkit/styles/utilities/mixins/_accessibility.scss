@@ -1,0 +1,24 @@
+////
+/// Accessibility
+////
+
+// Screen reader only helper
+@mixin sr-only-text() {
+  @include hide-text; // This is a Bourbon mixin. It contains most of what we need, with the exception of the properties below.
+  display: inline-block;
+  padding: 0; // 1
+  margin: 0; // 2
+  width: .1px; // 3
+  height: .1px; // 3
+}
+
+@mixin sr-only-element() {
+  @include hide-visually; /// Uses the hide-visually mixin from Bourbon, which can also make items visible on focus, for example.
+}
+
+// Aria hidden helper
+@mixin accessibly-hidden() {
+  &[aria-hidden=true] {
+    display: none;
+  }
+}
