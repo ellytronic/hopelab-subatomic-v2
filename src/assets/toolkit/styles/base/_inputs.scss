@@ -1,0 +1,208 @@
+////
+/// Inputs
+////
+
+
+// Block form elements
+input,
+textarea,
+select {
+  appearance: none;
+  border: $input-border-width solid color(gray);
+  border-radius: 0;
+  box-sizing: border-box;
+  color: color(base); // standardize on firefox
+  display: block;
+  font-size: $base-font-size;
+  height: $input-height;
+  line-height: $input-line-height;
+  margin: 0.2em 0;
+  max-width: $input-max-width;
+  outline: none;
+  padding: $input-padding-vertical 0.7em;
+  width: 100%;
+
+  &:focus,
+  &.input-focus {
+    box-shadow: $focus-shadow;
+  }
+
+  &.input-success {
+    border: 3px solid color(green-light);
+  }
+}
+
+.input-error {
+  border-left: 4px solid color(secondary-dark);
+  margin-top: 3rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  padding-top: 0.8rem;
+  position: relative;
+  right: 1.9rem;
+
+  input,
+  textarea,
+  select {
+    border: 3px solid color(secondary-dark);
+    width: calc(100% + 1.9rem); // 1.5rem left padding + 4px border from input error spacing
+  }
+
+  label {
+    margin-top: 0;
+  }
+
+  .input-inline {
+    border: $input-border-width solid color(gray);
+    width: inherit;
+  }
+
+  .input-inline-error {
+    border: 3px solid color(secondary-dark);
+  }
+}
+
+.input-error-label {
+  display: block;
+  font-size: $base-font-size;
+  font-weight: $font-bold;
+}
+
+.input-error-message {
+  color: color(secondary-dark);
+  display: block;
+  font-size: $base-font-size;
+  font-weight: $font-bold;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.input-required:after {
+  color: color(secondary-darkest);
+  content: ' (*Required)';
+}
+
+label {
+  display: block;
+  margin-top: 3rem;
+  max-width: $input-max-width;
+}
+
+textarea {
+  height: 16rem;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: color(white);
+  background-image: url('#{$image-path}/arrow-down.png');
+  background-image: url('#{$image-path}/arrow-down.svg');
+  background-position: right 1.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+}
+
+legend {
+  font-size: $h2-font-size;
+  font-weight: $font-bold;
+}
+
+.fieldset-inputs {
+  label {
+    margin-top: 0;
+  }
+}
+
+// Hint text
+
+.form-hint {
+  color: color(gray-medium);
+  font-family: $font-sans;
+  margin-bottom: 0;
+}
+
+// Custom checkboxes
+
+[type=checkbox],
+[type=radio] {
+  // The actual input element is only visible to screen readers, because
+  // all visual styling is done via the label.
+  @include sr-only();
+
+  .lt-ie9 & {
+    border: 0;
+    float: left;
+    margin: 0.4em 0.4em 0 0;
+    position: static;
+    width: auto;
+  }
+}
+
+[type=checkbox] + label,
+[type=radio] + label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+[type=checkbox] + label::before,
+[type=radio] + label::before {
+  background: color(white);
+  border-radius: $border-radius;
+  box-shadow: 0 0 0 1px color(gray-medium);
+  content: '\a0';
+  display: inline-block;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  margin-right: 0.6em;
+  text-indent: 0.15em;
+  vertical-align: middle\0; // Target IE 11 and below to vertically center inputs
+  width: 1.8rem;
+}
+
+[type=radio] + label::before {
+  box-shadow: 0 0 0 2px color(white), 0 0 0 3px color(gray-medium);
+  height: 1.6rem;
+  line-height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 100%;
+}
+
+[type=checkbox]:checked + label::before,
+[type=radio]:checked + label::before {
+  background-color: color(primary);
+  box-shadow: 0 0 0 1px color(primary);
+}
+
+[type=radio]:checked + label::before {
+  box-shadow: 0 0 0 2px color(white), 0 0 0 4px color(primary);
+}
+
+[type=radio]:focus + label::before {
+  box-shadow: 0 0 0 2px color(white), 0 0 0 4px color(primary), 0 0 3px 4px color(focus), 0 0 7px 4px color(focus);
+}
+
+[type=checkbox]:checked + label::before,
+[type=checkbox]:checked:disabled + label::before {
+  background-image: url('#{$image-path}/correct8.png');
+  background-image: url('#{$image-path}/correct8.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+[type=checkbox]:focus + label::before {
+  box-shadow: 0 0 0 1px color(white), 0 0 0 3px color(primary);
+}
+
+[type=checkbox]:disabled + label {
+  color: color(gray);
+}
+
+[type=checkbox]:disabled + label::before,
+[type=radio]:disabled + label::before {
+  background: color(gray-lighter);
+  box-shadow: 0 0 0 1px color(gray-light);
+  cursor: not-allowed;
+}

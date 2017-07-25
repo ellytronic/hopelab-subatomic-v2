@@ -18,7 +18,7 @@ p {
 }
 
 a {
-  // color: $color-primary;
+  color: color(primary);
   text-decoration: underline;
 
   &:hover,
@@ -31,7 +31,7 @@ a {
   }
 
   &:focus {
-    // box-shadow: $focus-shadow;
+    box-shadow: $focus-shadow;
     outline: 0;
   }
 }
