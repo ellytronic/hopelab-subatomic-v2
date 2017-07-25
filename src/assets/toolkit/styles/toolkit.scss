@@ -5,6 +5,7 @@
 @import "vendors/vendors";
 @import "utilities/utilities";
 @import "base/base";
+@import "theme/theme";
 
 .block {
   @include grid-container;
