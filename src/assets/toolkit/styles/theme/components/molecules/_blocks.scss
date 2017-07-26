@@ -1,0 +1,24 @@
+@import "../../utilities/utilities";
+
+.blocks {
+  $block-grid: (
+    columns: 12,
+    gutter: 80px,
+  );
+
+  @include grid-container;
+  
+  @include grid-media($media-md) {
+    @include grid-collapse($block-grid);
+  }
+
+  .block {
+    @include grid-media($media-md) {
+      @include grid-column(6, $block-grid);
+    }
+
+    @include grid-media($media-lg) {
+      @include grid-column(4, $block-grid);
+    }
+  }
+}

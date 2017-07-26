@@ -1,0 +1,16 @@
+@import "../../utilities/utilities";
+
+.header-group {
+  text-align: center;
+
+  @include grid-media($media-md) {
+    @include grid-column(8);
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+.header-group_subtitle {
+  @include h3();
+  font-family: $sans-bold-family;
+}

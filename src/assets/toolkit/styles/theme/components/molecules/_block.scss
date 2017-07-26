@@ -1,0 +1,33 @@
+@import "../../utilities/utilities";
+
+.block {
+
+}
+
+.block_image {
+  margin-bottom: 3.5rem;
+
+  img {
+    display: block;
+  }
+}
+
+.block_content {
+  @include padding(null 5.5rem);
+
+  @include grid-media($media-md) {
+    padding: 0;
+  }
+}
+
+.block_title {
+  @include h2();
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.block_subtitle {
+  @include h4();
+  font-family: $sans-bold-family;
+  margin-top: 0;
+}

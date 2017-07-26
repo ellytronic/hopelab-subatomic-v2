@@ -1,0 +1,66 @@
+////
+/// Typography
+////
+
+$font-stack-helvetica: 'Helvetica Neue', 'Helvetica', 'Arial';
+$font-stack-georgia: 'Georgia', 'Times', 'Times New Roman';
+$font-stack-monaco: 'Monaco', 'Consolas', 'Lucida Console';
+
+/// Base Font Family Map
+$base-font-families: (
+  monospace:  "'Source Code Pro', #{$font-stack-monaco}",
+  sans-serif: "'TheinhardtRegular', #{$font-stack-helvetica}",
+  serif:      "'Helvetius', #{$font-stack-georgia}"
+);
+
+$sans-font-families: (
+  sans-serif-thin: "'TheinhardtThin', #{$font-stack-helvetica}",
+  sans-serif-bold: "'TheinhardtBold', #{$font-stack-helvetica}",
+  sans-serif-black: "'TheinhardtBlack', #{$font-stack-helvetica}"
+);
+
+/// Base Font Family Setting.
+$base-font-family: unquote(map-get($base-font-families, sans-serif));
+
+/// Heading Font Family.
+$heading-font-family: unquote(map-get($base-font-families, serif));
+
+/// Monospace Font Family.
+$monospace-font-family: unquote(map-get($base-font-families, monospace));
+
+// Typography
+// Removing the !default from $em-base so we are not inheriting that
+// value from Bourbon.
+$em-base:                 10px;
+$base-font-size:          1.7rem;
+$base-font-size-large:    1.8rem;
+$small-font-size:         1.1rem ;
+$small-font-size-large:   1.3rem;
+$lead-font-size:          2rem;
+$title-font-size:         5.2rem;
+$h1-font-size:            2.2rem;
+$h1-font-size-large:      3.6rem;
+$h2-font-size:            2.2rem;
+$h2-font-size-large:      2.4rem;
+$h3-font-size:            1.7rem;
+$h3-font-size-large:      1.8rem;
+$h4-font-size:            1.5rem;
+$h4-font-size-large:      1.6rem;
+$h5-font-size:            1.3rem;
+$h5-font-size-large:      1.4rem;
+$h6-font-size:            1.2rem;
+$base-line-height:        1.88;
+$heading-line-height:     1.32;
+$lead-line-height:        1.32;
+
+$font-sans:           unquote(map-get($base-font-families, sans-serif));
+$font-serif:          unquote(map-get($base-font-families, serif));
+
+$sans-thin-family: unquote(map-get($sans-font-families, sans-serif-thin));
+$sans-bold-family: unquote(map-get($sans-font-families, sans-serif-bold));
+$sans-black-family: unquote(map-get($sans-font-families, sans-serif-black));
+
+$font-normal:         400;
+$font-bold:           700;
+
+$text-max-width:      53rem;

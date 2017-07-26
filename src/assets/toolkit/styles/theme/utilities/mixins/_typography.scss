@@ -1,0 +1,54 @@
+////
+/// Typography
+////
+
+@mixin h1 {
+  font-size: $h1-font-size;
+
+  @include grid-media($media-md) {
+    font-size: $h1-font-size-large;
+  }
+}
+
+@mixin h2 {
+  font-size: $h2-font-size;
+
+  @include grid-media($media-md) {
+    font-size: $h2-font-size-large;
+  }
+}
+
+@mixin h3 {
+  font-size: $h3-font-size;
+
+  @include grid-media($media-md) {
+    font-size: $h3-font-size-large;
+  }
+}
+
+@mixin h4 {
+  font-size: $h4-font-size;
+
+  @include grid-media($media-md) {
+    font-size: $h4-font-size-large;
+  }
+}
+
+@mixin h5 {
+  font-size: $h5-font-size;
+
+  @include grid-media($media-md) {
+    font-size: $h5-font-size-large;
+  }
+}
+
+@mixin h6 {
+  font-family: $font-sans;
+  font-size: $h6-font-size;
+  font-weight: $font-normal;
+  text-transform: uppercase;
+
+  @include grid-media($media-md) {
+
+  }
+}

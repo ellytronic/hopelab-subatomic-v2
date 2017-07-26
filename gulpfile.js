@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const assembler = require('fabricator-assemble');
 const browserSync = require('browser-sync');
 const csso = require('gulp-csso');
@@ -47,6 +48,13 @@ const config = {
       src: ['src/assets/toolkit/images/**/*', 'src/favicon.ico'],
       dest: 'dist/assets/toolkit/images',
       watch: 'src/assets/toolkit/images/**/*',
+    },
+  },
+  fonts: {
+    toolkit: {
+      src: ['src/assets/toolkit/fonts/**/*'],
+      dest: 'dist/assets/toolkit/fonts',
+      watch: 'src/assets/toolkit/fonts/**/*',
     },
   },
   templates: {
@@ -120,13 +128,65 @@ gulp.task('favicon', () => {
   .pipe(gulp.dest(config.dest));
 });
 
+// fonts
+gulp.task('fonts', () => {
+  return gulp.src(config.fonts.toolkit.src)
+    .pipe(gulp.dest(config.fonts.toolkit.dest));
+});
+
 
 // assembler
 gulp.task('assembler', (done) => {
   assembler({
     logErrors: config.dev,
-    dest: config.dest,
+    helpers: {
+      default: function (value, defaultValue) {
+        return value ? value : defaultValue;
+      },
+      compare: function (lvalue, operator, rvalue, options) {
+        var operators, result;
+
+        if (arguments.length < 3) {
+          throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
+        }
+
+        if (options === undefined) {
+          options = rvalue;
+          rvalue = operator;
+          operator = "===";
+        }
+
+        operators = {
+          '==': function (l, r) { return l == r; },
+          '===': function (l, r) { return l === r; },
+          '!=': function (l, r) { return l != r; },
+          '!==': function (l, r) { return l !== r; },
+          '<': function (l, r) { return l < r; },
+          '>': function (l, r) { return l > r; },
+          '<=': function (l, r) { return l <= r; },
+          '>=': function (l, r) { return l >= r; },
+          'typeof': function (l, r) { return typeof l == r; }
+        };
+
+        if (!operators[operator]) {
+          throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
+        }
+
+        result = operators[operator](lvalue, rvalue);
+
+        if (result) {
+          return options.fn(this);
+        } else {
+          return options.inverse(this);
+        }
+
+      },
+      attr: function(value) {
+        return _.kebabCase(value);
+      }
+    }
   });
+  // reload();
   done();
 });
 
@@ -155,6 +215,9 @@ gulp.task('serve', () => {
   gulp.task('images:watch', ['images'], browserSync.reload);
   gulp.watch(config.images.toolkit.watch, ['images:watch']);
 
+  gulp.task('fonts:watch', ['fonts'], browserSync.reload);
+  gulp.watch(config.fonts.toolkit.watch, ['fonts:watch']);
+
 });
 
 
@@ -166,6 +229,7 @@ gulp.task('default', ['clean'], () => {
     'styles',
     'scripts',
     'images',
+    'fonts',
     'assembler',
   ];
 

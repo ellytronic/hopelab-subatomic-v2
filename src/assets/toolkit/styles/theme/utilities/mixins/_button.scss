@@ -1,0 +1,6 @@
+$button-background:      color(primary);
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-palette: (
+  primary:                      #a4cab1,
+  secondary:                    #7cbce0,
+);

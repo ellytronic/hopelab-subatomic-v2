@@ -2,17 +2,26 @@
 /// Toolkit Styles
 ////
 
-@import "vendors/vendors";
-@import "utilities/utilities";
-@import "base/base";
-@import "theme/theme";
+// Base rollup
+// @import "vendors/vendors";
+// @import "utilities/utilities";
+// @import "base/base";
+// @import "theme/theme";
 
-.block {
-  @include grid-container;
-}
+// Theme rollup
+@import "theme/vendors/vendors";
+@import "theme/utilities/utilities";
+@import "theme/base/base";
+@import "theme/components/atoms/atoms";
+@import "theme/components/molecules/molecules";
+@import "theme/components/organisms/organisms";
 
-.block-image, .block-content {
-  @include grid-media($media-md) {
-    @include grid-column(6);
-  }
-}
+// .block {
+//   @include grid-container;
+// }
+
+// .block-image, .block-content {
+//   @include grid-media($media-md) {
+//     @include grid-column(6);
+//   }
+// }
