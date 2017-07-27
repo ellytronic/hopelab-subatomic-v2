@@ -1,0 +1,32 @@
+$input-height: 3rem;
+$input-line-height: $base-line-height;
+$input-max-width: 36rem;
+
+input,
+textarea {
+  @include base-font-size;
+  background: transparent;
+  appearance: none;
+  border: 0;
+  border-bottom: 1px solid color(base);
+  border-radius: 0;
+  box-sizing: border-box;
+  color: color(base); // standardize on firefox
+  display: block;
+  height: $input-height;
+  line-height: $input-line-height;
+  margin: 0.2em 0;
+  max-width: $input-max-width;
+  outline: none;
+  padding: .6rem 0;
+  width: 100%;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+::placeholder {
+  @include base-font-size;
+  font-family: $base-font-family;
+}

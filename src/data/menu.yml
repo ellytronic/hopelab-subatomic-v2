@@ -1,0 +1,21 @@
+footer:
+  - name: Contact Us
+  - name: Careers
+  - name: Newsletter Signup
+    desktop: false
+  - name: Terms & Conditions
+    desktop: false
+  - name: Privacy Policy
+    desktop: false
+footer_alt:
+  - name: Terms & Conditions
+  - name: Privacy Policy
+social_icons:
+  - name: Twitter
+    icon: twitter
+  - name: Facebook
+    icon: facebook
+  - name: Linkedin
+    icon: linkedin
+  - name: Youtube
+    icon: youtube

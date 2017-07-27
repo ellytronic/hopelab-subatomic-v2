@@ -1,0 +1,14 @@
+.subscribe {
+  position: relative;
+  width: 36rem;
+
+  .icon-only-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  label {
+    display: none;
+  }
+}

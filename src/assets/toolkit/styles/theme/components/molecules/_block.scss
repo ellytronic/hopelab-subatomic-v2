@@ -1,7 +1,14 @@
 @import "../../utilities/utilities";
 
 .block {
+  a {
+    text-decoration: none;
+    color: color(base);
 
+    &:hover {
+      @include underline-link;
+    }
+  }
 }
 
 .block_image {
@@ -21,13 +28,13 @@
 }
 
 .block_title {
-  @include h2();
+  @include h3();
   font-weight: normal;
   margin-bottom: 2rem;
 }
 
 .block_subtitle {
-  @include h4();
+  @include h5();
   font-family: $sans-bold-family;
   margin-top: 0;
 }

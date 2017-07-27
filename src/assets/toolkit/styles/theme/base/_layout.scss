@@ -1,0 +1,9 @@
+.center-section {
+
+  @include grid-media($media-md) {
+    @include grid-column(5);
+    float: none;
+    margin: 0 auto;
+    min-width: 57.5rem;
+  }
+}

@@ -1,0 +1,20 @@
+.social-icon-menu {
+  li {
+    display: inline-block;
+    margin-left: 4rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  svg {
+    vertical-align: middle;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}

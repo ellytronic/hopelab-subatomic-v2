@@ -1,0 +1,22 @@
+.icon-only-button {
+  background-color: transparent;
+  color: color(base);
+  padding: 0;
+  margin: 0;
+
+  &:hover,
+  &:focus,
+  &:active  {
+    background-color: transparent;
+    color: color(base);
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+
+.icon-only-button_label {
+  display: none;
+}

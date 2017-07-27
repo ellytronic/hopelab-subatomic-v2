@@ -4,6 +4,7 @@
 
 // Base rollup
 // @import "vendors/vendors";
+// @import "base/fonts";
 // @import "utilities/utilities";
 // @import "base/base";
 // @import "theme/theme";
@@ -12,6 +13,7 @@
 @import "theme/vendors/vendors";
 @import "theme/utilities/utilities";
 @import "theme/base/base";
+@import "theme/components/subatomic/subatomic";
 @import "theme/components/atoms/atoms";
 @import "theme/components/molecules/molecules";
 @import "theme/components/organisms/organisms";

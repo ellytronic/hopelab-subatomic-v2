@@ -1,3 +1,10 @@
+body {
+  text-rendering: optimizeLegibility;
+  
+  @include grid-media($media-md) {
+    font-size: $base-font-size-large;
+  }
+}
 
 h1 {
   font-weight: normal;
@@ -5,4 +12,26 @@ h1 {
 
 h2 {
   font-weight: normal;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   text-rendering: optimizeLegibility;
+// }
+
+a {
+  text-decoration: none;
+  color: color(base);
+
+  &:hover {
+    color: color(base);
+  }
+}
+
+address {
+  line-height: $base-line-height;
 }
