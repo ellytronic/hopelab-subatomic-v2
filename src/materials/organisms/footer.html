@@ -1,53 +1,57 @@
-<footer class="footer-section">
-  <div class="footer_brand-address">
-    <div class="logo">
-      
-    </div>
-    <address class="address">
-      100 California Street<br>
-      Suite 1150<br>
-      San Francisco, CA 94111
-    </address>
-    <div class="footer-menu">
-      <ul>
-        {{#each menu.footer}}
-        <li><a href="#">{{name}}</a></li>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-inner">
+      <div class="footer_brand-address">
+        <div class="logo">
+          
+        </div>
+        <address class="address">
+          100 California Street<br>
+          Suite 1150<br>
+          San Francisco, CA 94111
+        </address>
+        <div class="footer-menu">
+          <ul>
+            {{#each menu.footer}}
+            <li><a href="#">{{name}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
 
-  <div class="footer_sole">
-    <div class="footer__subscribe-social">
-      <div class="subscribe-group">
-        <form class="subscribe">
-          <label for="input-type-text">Subscribe to our Newsletter</label>
-          <input id="input-type-text" name="input-type-text" type="text" placeholder="Subscribe to our Newsletter">
-          <button class="icon-only-button"><span class="icon-only-button_label">Join</span>{{> icon}}</button>
-        </form>
-      </div>
-      <div class="social-icon-menu">
-        <ul>
-          {{#each menu.social_icons}}
-          <li><a href="#"><span>{{name}}</span>
-          <svg class="i-svg">
-            <use xlink:href="#i-{{icon}}"></use>
-          </svg>
-          </a></li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-    <div class="footer_copy-terms">
-      <div class="footer-copy">
-        ©HopeLab 2018. A Part of the Omidyar Group. All rights reserved.
-      </div>
-      <div class="footer_terms">
-        <ul>
-        {{#each menu.footer_alt}}
-        <li><a href="#">{{name}}</a></li>
-        {{/each}}
-        </ul>
+      <div class="footer_sole">
+        <div class="footer__subscribe-social">
+          <div class="subscribe-group">
+            <form class="subscribe">
+              <label for="input-type-text">Subscribe to our Newsletter</label>
+              <input id="input-type-text" name="input-type-text" type="text" placeholder="Subscribe to our Newsletter">
+              <button class="icon-only-button"><span class="icon-only-button_label">Join</span>{{> icon}}</button>
+            </form>
+          </div>
+          <div class="social-icon-menu">
+            <ul>
+              {{#each menu.social_icons}}
+              <li><a href="#"><span>{{name}}</span>
+              <svg class="i-svg">
+                <use xlink:href="#i-{{icon}}"></use>
+              </svg>
+              </a></li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        <div class="footer_copy-terms">
+          <div class="footer-copy">
+            ©HopeLab 2018. A Part of the Omidyar Group. All rights reserved.
+          </div>
+          <div class="footer_terms">
+            <ul>
+            {{#each menu.footer_alt}}
+            <li><a href="#">{{name}}</a></li>
+            {{/each}}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

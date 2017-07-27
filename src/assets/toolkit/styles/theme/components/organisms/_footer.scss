@@ -1,9 +1,19 @@
-.footer-section {
-  @include padding(12.5rem 2.5rem 5rem);
+.footer {
+  @include grid-container;
   background-color: color(grey-lighter);
+}
+
+.footer-container {
+  max-width: $max-container-width;
+  margin: 0 auto;
+}
+
+.footer-inner {
+  @include grid-column(12);
+  @include padding(12.5rem 0 5rem);
 
   @include grid-media($media-lg) {
-   @include padding(20rem 10rem 7rem); 
+   @include padding(20rem 0 7rem); 
   }
 
   ul {
