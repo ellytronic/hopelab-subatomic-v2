@@ -4,6 +4,6 @@ colors:
     Medium: "#999999"
     Light: "#dde1dc"
   secondary:
-    Red: "#7cbce0"
-    Yellow: "#a4cab1"
-    Blue: "#f9ecb1"
+    Primary: "#7cbce0"
+    Secondary: "#a4cab1"
+    Attention: "#f9ecb1"
