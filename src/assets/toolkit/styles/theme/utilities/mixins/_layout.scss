@@ -1,0 +1,11 @@
+@mixin container {
+  @include grid-container;
+  @include padding(null 2.5rem);
+  max-width: $max-container-width;
+  margin: 0 auto;
+}
+
+@mixin center-column {
+  float: none;
+  margin: 0 auto;
+}

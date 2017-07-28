@@ -4,16 +4,11 @@
 }
 
 .footer-container {
-  max-width: $max-container-width;
-  margin: 0 auto;
-}
-
-.footer-inner {
-  @include grid-column(12);
-  @include padding(12.5rem 0 5rem);
+  @include container;
+  @include padding(12.5rem null 5rem);
 
   @include grid-media($media-lg) {
-   @include padding(20rem 0 7rem); 
+   @include padding(20rem null 7rem); 
   }
 
   ul {
@@ -22,6 +17,18 @@
 }
 
 .footer_brand-address {
+  .logo {
+    margin-bottom: 10rem;
+
+    @include grid-media($media-lg) {
+      margin-bottom: 7.5rem;
+    }
+
+    @include grid-media($media-lg) {
+      margin-bottom: 4rem;
+    }
+  }
+
   address {
     display: none;
     margin-bottom: 7rem;
@@ -35,16 +42,26 @@
 .footer-menu {
   margin-bottom: 10rem;
 
-  @include grid-media($media-lg) {
+  @include grid-media($media-md) {
     margin-bottom: 15rem;
   }
+}
+
+
+.footer_sole {
+  @include grid-container;
 }
 
 .footer__subscribe-social {
   @include grid-container;
   
+  @include grid-media($media-md) {
+    float: right; 
+  }
+
   @include grid-media($media-lg) {
     @include grid-collapse;
+    float: none;
   }
 
   .subscribe-group {
@@ -60,13 +77,16 @@
   .social-icon-menu {
     margin-bottom: 10rem;
 
-    @include grid-media($media-lg) {
-      @include grid-column(6);
+    @include grid-media($media-md) {
       margin-bottom: 0rem;
 
       ul {
-        float: right;
+        float: right;  
       }
+    }
+
+    @include grid-media($media-lg) {
+      @include grid-column(6);
     }
   }
 }
@@ -74,14 +94,25 @@
 .footer_copy-terms {
   @include grid-container;
 
+  @include grid-media($media-md) {
+    float: left;
+    line-height: 4rem;
+  }
+
   @include grid-media($media-lg) {
     @include grid-collapse;
+    float: none;
+    line-height: 1;
   }
 }
 
 .footer-copy {
   font-size: 1.1rem;
   
+  @include grid-media($media-md) {
+    float: left;
+  }
+
   @include grid-media($media-lg) {
     @include grid-column(6);
     font-size: 1.3rem;

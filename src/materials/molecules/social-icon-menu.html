@@ -1,0 +1,11 @@
+<div class="social-icon-menu">
+  <ul>
+    {{#each menu.social_icons}}
+    <li><a href="#"><span>{{name}}</span>
+    <svg class="i-svg">
+      <use xlink:href="#i-{{icon}}"></use>
+    </svg>
+    </a></li>
+    {{/each}}
+  </ul>
+</div>

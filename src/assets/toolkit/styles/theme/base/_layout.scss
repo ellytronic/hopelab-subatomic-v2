@@ -1,5 +1,8 @@
-.center-section {
+.grid {
 
+}
+
+.center-section {
   @include grid-media($media-md) {
     @include grid-column(5);
     float: none;

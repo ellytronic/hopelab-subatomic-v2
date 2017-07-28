@@ -4,9 +4,13 @@
   text-align: center;
 
   @include grid-media($media-md) {
+    @include grid-column(10);
+    @include center-column;
+  }
+
+  @include grid-media($media-lg) {
     @include grid-column(7);
-    float: none;
-    margin: 0 auto;
+    @include center-column;
   }
 }
 

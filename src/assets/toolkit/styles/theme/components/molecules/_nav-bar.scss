@@ -1,0 +1,16 @@
+.navbar {
+  @include padding(5rem null);
+  position: relative;
+
+  .navbar-container {
+    @include container;
+  }
+
+  .logo {
+    float: left;
+  }
+
+  .menu-toggle {
+    float: right;
+  }
+}

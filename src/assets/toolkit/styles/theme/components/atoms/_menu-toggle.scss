@@ -1,0 +1,13 @@
+.menu-toggle {
+  cursor: pointer;
+  
+  svg {
+    vertical-align: middle;
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+}
+
+.menu-toggle--close {
+  display: none;
+}

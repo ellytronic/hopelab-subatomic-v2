@@ -3,12 +3,12 @@ $input-line-height: $base-line-height;
 $input-max-width: 36rem;
 
 input,
-textarea {
+textarea,
+select {
   @include base-font-size;
   background: transparent;
   appearance: none;
-  border: 0;
-  border-bottom: 1px solid color(base);
+  border: 1px solid color(base);
   border-radius: 0;
   box-sizing: border-box;
   color: color(base); // standardize on firefox
@@ -26,7 +26,124 @@ textarea {
   }
 }
 
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+select {
+  border: 0;
+  border-bottom: 1px solid color(base);
+}
+
 ::placeholder {
   @include base-font-size;
   font-family: $base-font-family;
+}
+
+select {
+  @include padding(0)
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: color(white);
+  // background-image: url('#{$image-path}/arrow-down.png');
+  // background-image: url('#{$image-path}/arrow-down.svg');
+  background-position: right 1.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+}
+
+// Custom checkboxes
+
+[type=checkbox],
+[type=radio] {
+  // The actual input element is only visible to screen readers, because
+  // all visual styling is done via the label.
+  position: absolute;
+  left: -999em;
+
+  .lt-ie9 & {
+    border: 0;
+    float: left;
+    margin: 0.4em 0.4em 0 0;
+    position: static;
+    width: auto;
+  }
+}
+
+[type=checkbox] + label,
+[type=radio] + label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+[type=checkbox] + label::before,
+[type=radio] + label::before {
+  background: color(white);
+  border-radius: $border-radius;
+  box-shadow: 0 0 0 1px color(gray-medium);
+  content: '\a0';
+  display: inline-block;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  margin-right: 0.6em;
+  text-indent: 0.15em;
+  vertical-align: middle\0; // Target IE 11 and below to vertically center inputs
+  width: 1.8rem;
+}
+
+[type=radio] + label::before {
+  box-shadow: 0 0 0 2px color(white), 0 0 0 3px color(gray-medium);
+  height: 1.6rem;
+  line-height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 100%;
+}
+
+[type=checkbox]:checked + label::before,
+[type=radio]:checked + label::before {
+  background-color: color(primary);
+  box-shadow: 0 0 0 1px color(primary);
+}
+
+[type=radio]:checked + label::before {
+  box-shadow: 0 0 0 2px color(white), 0 0 0 4px color(primary);
+}
+
+[type=radio]:focus + label::before {
+  box-shadow: 0 0 0 2px color(white), 0 0 0 4px color(primary), 0 0 3px 4px color(focus), 0 0 7px 4px color(focus);
+}
+
+[type=checkbox]:checked + label::before,
+[type=checkbox]:checked:disabled + label::before {
+  // background-image: url('#{$image-path}/correct8.png');
+  // background-image: url('#{$image-path}/correct8.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+[type=checkbox]:focus + label::before {
+  box-shadow: 0 0 0 1px color(white), 0 0 0 3px color(primary);
+}
+
+[type=checkbox]:disabled + label {
+  color: color(gray);
+}
+
+[type=checkbox]:disabled + label::before,
+[type=radio]:disabled + label::before {
+  background: color(gray-lighter);
+  box-shadow: 0 0 0 1px color(gray-light);
+  cursor: not-allowed;
 }
