@@ -1,0 +1,31 @@
+@import "../../utilities/utilities";
+
+.hero {
+  
+}
+
+.hero-header {
+  position: relative;
+  min-height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include grid-media($media-md) {
+    min-height: 50rem;
+  }
+
+  @include grid-media($media-lg) {
+    height: 60vh;
+  }
+
+  .header-group {
+    @include grid-media($media-lg) {
+      @include center-transform;
+    }
+  }
+}
+
+.hero-image {
+  margin-bottom: 10rem;
+}

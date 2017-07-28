@@ -1,3 +1,5 @@
+@import "../../utilities/utilities";
+
 .subscribe {
   position: relative;
   width: 36rem;
@@ -9,6 +11,6 @@
   }
 
   label {
-    display: none;
+    @include sr-only-text();
   }
 }

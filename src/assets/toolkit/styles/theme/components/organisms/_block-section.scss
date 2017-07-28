@@ -1,0 +1,37 @@
+@import "../../utilities/utilities";
+
+.block-section {
+  background-color: color(grey-lightest);
+  
+  .block-section_container {
+    @include container;
+    @include padding(12rem null);
+
+    @include grid-media($media-md) {
+      @include padding(20rem null);
+    }
+  }
+
+  .block-section_header {
+    @include grid-container;
+    padding-bottom: 12rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 15rem;
+    }
+
+    .icon-link {
+      float: right;
+    }
+  }
+
+  .block-section_title {
+    @include h4();
+    font-family: $sans-bold-family;
+    float: left;
+  }
+
+  .blocks {
+    
+  }
+}

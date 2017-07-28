@@ -1,3 +1,5 @@
+@import "../../utilities/utilities";
+
 .footer {
   @include grid-container;
   background-color: color(grey-lighter);
@@ -20,7 +22,7 @@
   .logo {
     margin-bottom: 10rem;
 
-    @include grid-media($media-lg) {
+    @include grid-media($media-md) {
       margin-bottom: 7.5rem;
     }
 

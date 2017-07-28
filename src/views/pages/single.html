@@ -1,14 +1,11 @@
 {{> navbar}}
-<div class="row">
-  <div class="column small-12 large-12 padding-top-10 padding-bottom-10">
-    {{> header-group}}
-    <div class="full-image">
-      {{> figure image="http://via.placeholder.com/1440x810"}}
-    </div>
-    <div class="center-section padding-top-10 padding-bottom-10">
-      {{> content-group}}
-    </div>
-    {{> blocks}}
+<div class="page-container">
+  {{> hero}}
+  <div class="single-section center-section">
+    {{> content-group}}
   </div>
 </div>
+
+{{> block-section}}
+
 {{> footer}}
