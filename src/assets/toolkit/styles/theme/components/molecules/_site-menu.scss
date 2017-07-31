@@ -1,0 +1,10 @@
+@import "../../utilities/utilities";
+
+.site-menu {
+  &.parent {
+    @include grid-media($media-lg) {
+      float: left;
+      width: 33.3%;
+    }
+  }
+}

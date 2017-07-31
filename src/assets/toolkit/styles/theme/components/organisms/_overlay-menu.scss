@@ -1,0 +1,78 @@
+@import "../../utilities/utilities";
+
+.overlay-menu {
+  background-color: color(grey-lighter);
+  width: 100%;
+
+  ul {
+    @include unstyled-list();
+  }
+
+  > ul {
+    @include grid-container;
+  }
+
+  li {
+    font-family: $font-serif;
+    font-size: 1.6rem;
+
+    @include grid-media($media-md) {
+      font-size: 2.5rem;
+    }
+
+    a {
+      display: inline-block;
+      transition: $button-transition;
+
+      &:hover {
+        color: color(primary);
+      }
+    }
+
+    &.parent {
+      padding-bottom: 5rem;
+
+      @include grid-media($media-md) {
+        padding-bottom: 7.5rem;
+      }
+
+      > a {
+        padding-bottom: 2.5rem;
+
+        @include grid-media($media-lg) {
+          padding-bottom: 7.5rem;
+        }
+      }
+    }
+  }
+
+  .overlay-menu_nav--3columns {
+    .parent {
+      @include grid-media($media-lg) {
+        float: left;
+        width: 33.3%;
+      }
+    }
+  }
+
+  .overlay-menu_nav--centered {
+    .parent {
+      @include grid-media($media-lg) {
+        
+      }
+    }
+  }
+}
+
+.overlay-menu_container {
+  @include container;
+  padding-top: 16.5rem;
+  
+  @include grid-media($media-md) {
+    padding-top: 22rem;
+  }
+
+  @include grid-media($media-lg) {
+    padding-top: 28.5rem;
+  }
+}
