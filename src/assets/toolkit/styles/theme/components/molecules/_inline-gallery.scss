@@ -1,12 +1,17 @@
 @import "../../utilities/utilities";
 
-.inline-gallery {
+.inline-gallery_container {
   $inline-grid: (
     columns: 12,
-    gutter: 50px,
+    gutter: 5.75%,
   );
 
   @include grid-container;
+
+  @include grid-media($media-md) {
+    margin-left: -6.25%;
+    margin-right: -6.25%;
+  }
 
   .inline-gallery_image {
     margin-bottom: 3rem;
@@ -14,6 +19,10 @@
     @include grid-media($media-md) {
       @include grid-column(6, $inline-grid);
       margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
     }
   }
 }

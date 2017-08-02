@@ -23,18 +23,8 @@
   }
 
   .inline-gallery {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-
-    @include grid-media($media-md) {
-      margin-left: -10rem;
-      margin-right: -10rem;
-    }
-
-    @include grid-media($media-lg) {
-      margin-left: -15rem;
-      margin-right: -15rem;
-    }
+    @include container;
+    margin-bottom: 10rem;
   }
 
   .inline-gallery_image {
