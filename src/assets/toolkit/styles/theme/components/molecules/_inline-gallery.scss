@@ -9,8 +9,11 @@
   @include grid-container;
 
   .inline-gallery_image {
+    margin-bottom: 3rem;
+
     @include grid-media($media-md) {
       @include grid-column(6, $inline-grid);
+      margin-bottom: 0;
     }
   }
 }

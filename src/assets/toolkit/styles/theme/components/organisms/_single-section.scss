@@ -12,18 +12,50 @@
     margin-right: -2.5rem;
 
     @include grid-media($media-md) {
+      margin-left: -5rem;
+      margin-right: -5rem;
+    }
+
+    @include grid-media($media-lg) {
       margin-left: -10rem;
       margin-right: -10rem;
     }
   }
 
   .inline-gallery {
-    margin-left: -7.5rem;
-    margin-right: -7.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
 
     @include grid-media($media-md) {
+      margin-left: -10rem;
+      margin-right: -10rem;
+    }
+
+    @include grid-media($media-lg) {
       margin-left: -15rem;
       margin-right: -15rem;
+    }
+  }
+
+  .inline-gallery_image {
+    &:nth-child(odd) {
+      @include grid-media($media-sm-below) {
+        margin-left: -5rem;
+      }
+    }
+
+    &:nth-child(even) {
+      @include grid-media($media-sm-below) {
+        margin-right: -5rem;
+      }
+    }
+
+    figcaption {
+      margin-left: 5rem;
+
+      @include grid-media($media-md) {
+        margin-left: 0;
+      }
     }
   }
 }

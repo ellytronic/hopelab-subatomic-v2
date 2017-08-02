@@ -4,3 +4,7 @@ $neat-grid: (
 );
 
 $max-container-width: none;
+
+$media-sm-below: (
+    media: 'only screen and (max-width: #{$screen-sm-max})',
+);

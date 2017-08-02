@@ -20,7 +20,15 @@
   @include position(absolute, null null 0 0);
 
   .button {
-    @include padding(null 11.5rem);
+    @include padding(2rem 5rem);
     margin-bottom: 0;
+
+    @include grid-media($media-md) {
+      @include padding(2.5rem 9rem);
+    }
+
+    @include grid-media($media-lg) {
+      @include padding(null 11.5rem);
+    }
   }
 }
