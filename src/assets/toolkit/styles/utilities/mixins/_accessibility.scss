@@ -1,3 +1,5 @@
+@import 'bourbon/app/assets/stylesheets/bourbon';
+
 ////
 /// Accessibility
 ////
@@ -13,7 +15,7 @@
 }
 
 @mixin sr-only-element() {
-  @include hide-visually; /// Uses the hide-visually mixin from Bourbon, which can also make items visible on focus, for example.
+  @include hide-text; /// Uses the hide-visually mixin from Bourbon, which can also make items visible on focus, for example.
 }
 
 // Aria hidden helper

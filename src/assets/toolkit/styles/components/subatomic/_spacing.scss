@@ -4,36 +4,31 @@
 
 $properties: ('margin', 'padding');
 $sides: ('top', 'right', 'bottom', 'left');
+$spaces: ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '20', '30', '40');
 
 @each $property in $properties {
-  @for $i from 0 through 12 {
+  @each $space in $spaces {
     @each $side in $sides {
       // margin-1, margin-top-1, etc
-      .#{$property}-#{$i},
-      .#{$property}-#{$side}-#{$i} {
-        #{$property}-#{$side}: #{$i}rem !important;
+      .#{$property}-#{$space},
+      .#{$property}-#{$side}-#{$space} {
+        #{$property}-#{$side}: #{$space}rem !important;
       }
     }
 
     // margin-horizontal-1, margin-vertical-1, etc
-    .#{$property}-horizontal-#{$i} {
-      #{$property}-left: #{$i}rem !important;
-      #{$property}-right: #{$i}rem !important;
+    .#{$property}-horizontal-#{$space} {
+      #{$property}-left: #{$space}rem !important;
+      #{$property}-right: #{$space}rem !important;
     }
 
-    .#{$property}-vertical-#{$i} {
-      #{$property}-bottom: #{$i}rem !important;
-      #{$property}-top: #{$i}rem !important;
+    .#{$property}-vertical-#{$space} {
+      #{$property}-bottom: #{$space}rem !important;
+      #{$property}-top: #{$space}rem !important;
     }
   }
 
   @each $side in $sides {
-    // margin-small, margin-top-small, etc
-    .#{$property}-small,
-    .#{$property}-#{$side}-small {
-      #{$property}-#{$side}: 0.5rem !important;
-    }
-
     .#{$property}-none,
     .#{$property}-#{$side}-none {
       #{$property}-#{$side}: 0 !important;

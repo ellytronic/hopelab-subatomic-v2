@@ -3,13 +3,14 @@
 .blocks {
   $block-grid: (
     columns: 12,
-    gutter: 80px,
+    gutter: 5.75%,
   );
 
   @include grid-container;
   
   @include grid-media($media-md) {
-    @include grid-collapse($block-grid);
+    margin-left: -6.5%;
+    margin-right: -6.5%;
   }
 
   .block {
