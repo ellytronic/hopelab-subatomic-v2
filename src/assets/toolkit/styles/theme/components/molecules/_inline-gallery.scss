@@ -1,0 +1,16 @@
+@import "../../utilities/utilities";
+
+.inline-gallery {
+  $inline-grid: (
+    columns: 12,
+    gutter: 50px,
+  );
+
+  @include grid-container;
+
+  .inline-gallery_image {
+    @include grid-media($media-md) {
+      @include grid-column(6, $inline-grid);
+    }
+  }
+}

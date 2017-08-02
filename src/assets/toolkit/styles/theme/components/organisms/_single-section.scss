@@ -1,7 +1,29 @@
 @import "../../utilities/utilities";
 
 .single-section {
-  .content-group {
+  .content-group,
+  .video-embed,
+  .inline-gallery {
     margin-bottom: 10rem;
+  }
+
+  .video-embed {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+
+    @include grid-media($media-md) {
+      margin-left: -10rem;
+      margin-right: -10rem;
+    }
+  }
+
+  .inline-gallery {
+    margin-left: -7.5rem;
+    margin-right: -7.5rem;
+
+    @include grid-media($media-md) {
+      margin-left: -15rem;
+      margin-right: -15rem;
+    }
   }
 }

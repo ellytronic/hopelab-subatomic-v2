@@ -3,6 +3,14 @@
   @include padding(null 2.5rem);
   max-width: $max-container-width;
   margin: 0 auto;
+
+  @include grid-media($media-md) {
+    @include padding(null 5rem);
+  }
+
+  @include grid-media($media-lg) {
+    @include padding(null 10rem);
+  }
 }
 
 @mixin center-column {

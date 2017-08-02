@@ -1,6 +1,16 @@
-$button-background:      color(primary);
+$button-background:      color(primary-alt);
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-palette: (
-  primary:                      #a4cab1,
+  primary:                      #f9ecb1,
   secondary:                    #7cbce0,
+);
+$button-radius: 0;
+$button-color: color(black);
+$button-padding: 2.5rem 7rem;
+
+$button-sizes: (
+  tiny: 1.3rem,
+  small: 1.6rem,
+  default: 1.8rem,
+  large: 2rem,
 );
