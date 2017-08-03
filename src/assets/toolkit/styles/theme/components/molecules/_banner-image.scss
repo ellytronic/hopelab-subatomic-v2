@@ -1,8 +1,10 @@
 @import "../../utilities/utilities";
+// requires atoms/figure
+// requires molecules/full-image
 
-.banner-image {
+// .banner-image {
 
-}
+// }
 
 .banner-image_container {
   @include position(absolute, 0 2.5rem);

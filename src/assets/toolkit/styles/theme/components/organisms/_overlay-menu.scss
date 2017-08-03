@@ -1,4 +1,6 @@
 @import "../../utilities/utilities";
+// requires molecules/overlay
+
 
 .overlay-menu {
   $overlay-grid-xl: (
@@ -69,24 +71,16 @@
   }
 
   .overlay-menu_nav--centered {
-    .parent {
-      @include grid-media($media-lg) {
-        
-      }
+    text-align: center;
+
+    @include grid-media($media-lg) {
+      
     }
   }
 }
 
-.overlay-menu_container {
-  @include container;
-  padding-top: 16.5rem;
-    max-width: 157.5rem;
-  
-  @include grid-media($media-md) {
-    padding-top: 22rem;
-  }
-
-  @include grid-media($media-lg) {
-    padding-top: 28.5rem;
-  }
+.overlay-menu--centered {
+  z-index: 4;
 }
+
+
