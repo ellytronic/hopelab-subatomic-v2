@@ -5,6 +5,10 @@
   position: relative;
   z-index: 3;
 
+  @include grid-media($media-lg) {
+    @include padding(8.5rem null);
+  }
+
   .navbar-container {
     @include container;
   }
