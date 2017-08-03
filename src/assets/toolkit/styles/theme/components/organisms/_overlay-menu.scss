@@ -13,9 +13,6 @@
     gutter: 5rem,
   );
 
-  background-color: color(grey-lighter);
-  width: 100%;
-
   ul {
     @include unstyled-list();
   }
@@ -77,10 +74,8 @@
       
     }
   }
+
+  .overlay_container {
+    // max-width: 157.5rem;
+  }
 }
-
-.overlay-menu--centered {
-  z-index: 4;
-}
-
-

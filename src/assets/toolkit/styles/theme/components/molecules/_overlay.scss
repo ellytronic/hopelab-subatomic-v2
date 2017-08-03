@@ -3,6 +3,13 @@
 .overlay {
   @include position(absolute, 0 0 0 0);
   z-index: 2;
+
+  background-color: color(grey-lighter);
+  width: 100%;
+
+  &--centered {
+    z-index: 4;
+  }
 }
 
 .f-container {
@@ -13,9 +20,9 @@
 
 .overlay_container {
   @include container;
-    padding-top: 16.5rem;
-    max-width: 157.5rem;
-  
+  padding-top: 16.5rem;
+  max-width: 157.5rem;
+
   @include grid-media($media-md) {
     padding-top: 22rem;
   }
