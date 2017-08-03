@@ -3,6 +3,7 @@
 .navbar {
   @include padding(5rem null);
   position: relative;
+  z-index: 3;
 
   .navbar-container {
     @include container;

@@ -1,0 +1,6 @@
+@import "../../utilities/utilities";
+
+.overlay {
+  @include position(absolute, 0 0 0 0);
+  z-index: 2;
+}

@@ -1,6 +1,16 @@
 @import "../../utilities/utilities";
 
 .overlay-menu {
+  $overlay-grid-xl: (
+    columns: 12,
+    gutter: 18rem,
+  );
+
+  $overlay-grid: (
+    columns: 12,
+    gutter: 5rem,
+  );
+
   background-color: color(grey-lighter);
   width: 100%;
 
@@ -9,7 +19,7 @@
   }
 
   > ul {
-    @include grid-container;
+    
   }
 
   li {
@@ -49,8 +59,11 @@
   .overlay-menu_nav--3columns {
     .parent {
       @include grid-media($media-lg) {
-        float: left;
-        width: 33.3%;
+        @include grid-column(4, $overlay-grid);
+      }
+
+      @media (min-width: 1400px) {
+        @include grid-column(4, $overlay-grid-xl);
       }
     }
   }
@@ -67,6 +80,7 @@
 .overlay-menu_container {
   @include container;
   padding-top: 16.5rem;
+    max-width: 157.5rem;
   
   @include grid-media($media-md) {
     padding-top: 22rem;
