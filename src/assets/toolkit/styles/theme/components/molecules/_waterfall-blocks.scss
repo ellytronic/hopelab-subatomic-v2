@@ -1,2 +1,25 @@
 @import "../../utilities/utilities";
 
+.waterfall-blocks {
+  .block {
+    padding-bottom: 12rem;
+
+    &:nth-child(4n) {
+      clear: both;
+    }
+
+    &:nth-child(odd) .block_image {
+      @include grid-media($media-sm-below) {
+        margin-left: -2.5rem;
+        margin-right: 2.5rem;
+      }
+    }
+
+    &:nth-child(even) .block_image {
+      @include grid-media($media-sm-below) {
+        margin-right: -2.5rem;
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}
