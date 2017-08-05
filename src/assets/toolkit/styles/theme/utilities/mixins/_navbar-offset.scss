@@ -1,0 +1,12 @@
+$navbar-offset: 12.3rem;
+$navbar-offset-lg: 19.3rem;
+
+@mixin navbar-offset() {
+  margin-top: (-$navbar-offset);
+  padding-top: $navbar-offset;
+
+  @include grid-media($media-lg) {
+    margin-top: (-$navbar-offset-lg);
+    padding-top: $navbar-offset-lg;
+  }
+}
