@@ -2,7 +2,6 @@
 .leader {
   @include full-container;
   @include navbar-offset;
-  margin-bottom: 10rem;
 
   &.bg-primary-alt {
     background-color: color(primary-alt);
@@ -11,35 +10,12 @@
 
 .leader_container {
   @include container;
-  @include cover-height;
   padding-bottom: 5rem;
   max-width: 144rem;
-
-  @include grid-media($media-lg) {
-    height: auto;
-    min-height: 70vh;
-  }
-
-  @media (min-width: 1500px) {
-    max-height: none;
-  }
 }
 
 .leader_grid {
-  @include grid-media($media-lg) {
-    display: flex;
-    flex-direction: row-reverse;
-  }
 
-  .leader_column {
-    @include grid-media($media-lg) {
-      width: 50%;
-    }
-
-    @include grid-media($media-xl) {
-      margin-bottom: 10rem;
-    }
-  }
 }
 
 .leader_image {
@@ -60,7 +36,58 @@
   height: 100%;
 
   h1 {
-    @include h2();
+    @include h1();
     margin-bottom: 4rem;
+  }
+}
+
+.leader-flex {
+  .leader_grid {
+    @include grid-media($media-lg) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .leader_column {
+      @include grid-media($media-lg) {
+        width: 50%;
+        margin-bottom: 10rem;
+      }
+    }
+  }
+}
+
+.leader-float {
+
+  .leader_grid {
+    $leader-grid: (
+      columns: 12,
+      gutter: 5rem,
+    );
+
+    @include grid-media($media-lg) {
+      @include grid-collapse($leader-grid);
+      display: flex;
+
+      &:first-child {
+        @include cover-height;
+      }
+
+      &:last-child {
+        display: inline;
+      }
+    }
+
+    .leader_column {
+      @include grid-media($media-lg) {
+        @include grid-column(6, $leader-grid);
+      }
+
+      &.right {
+        @include grid-media($media-lg) {
+          @include grid-push(6, $leader-grid);
+        }
+      }
+    }
   }
 }
