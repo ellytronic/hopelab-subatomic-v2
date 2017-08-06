@@ -1,7 +1,15 @@
 <div class="block {{ classes }}">
   <div class="block_image"><a href="#"><img src="{{default image 'http://via.placeholder.com/768x961'}}"></a></div>
   <div class="block_content">
+    {{#if title}}
     <h4 class="block_title"><a href="#">{{default title 'The Key to Health and Happiness for City Dwellers'}}</a></h4>
+    {{/if}}
+    {{#if subtitle}}
     <p class="block_subtitle"><a href="#">{{default category 'Technology'}}</a></p>
+    {{/if}}
+    {{#if caption}}
+    <p class="block_caption">{{default caption '75% Praesent sit amet leo ara consequat est, porttitor odio nonaa, euismod velit. Pellenter a esquetus sagittis est.'}}</p>
+    {{/if}}
   </div>
+  
 </div>

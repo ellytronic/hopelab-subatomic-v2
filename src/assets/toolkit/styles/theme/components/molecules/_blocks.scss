@@ -23,4 +23,19 @@
       @include grid-column(4, $block-grid);
     }
   }
+
+  &.blocks--steps .block {
+
+    &:nth-child(2) {
+      @include grid-media($media-md) {
+        padding-top: 40rem;
+      }
+    }
+
+    &:nth-child(3) {
+      @include grid-media($media-lg) {
+        padding-top: 80rem;
+      }
+    }
+  }
 }
