@@ -7,6 +7,27 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  // Add variant classes for background color shift
+  &.primary-alt {
+    .split-link_action a {
+      background-color: color(primary-alt);
+
+      &:hover {
+        background-color: darken(color(primary-alt), 10%);
+      }
+    }
+  }
+
+  &.secondary {
+    .split-link_action a {
+      background-color: color(secondary);
+
+      &:hover {
+        background-color: darken(color(secondary), 10%);
+      }
+    }
+  }
 }
 
 .split-link_block {
@@ -24,7 +45,6 @@
 }
 
 .split-link_action {
-  $background-color: color(primary);
   height: 100vw;
   position: relative;
 
@@ -37,10 +57,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $background-color;
+    background-color: color(primary);
 
     &:hover {
-      background-color: darken($background-color, 5%);
+      background-color: darken(color(primary), 10%);
     }
   }
 }
