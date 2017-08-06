@@ -1,7 +1,3 @@
-$input-height: 3rem;
-$input-line-height: $base-line-height;
-$input-max-width: 36rem;
-
 input,
 textarea,
 select {
@@ -11,7 +7,7 @@ select {
   border: 1px solid color(base);
   border-radius: 0;
   box-sizing: border-box;
-  color: color(base); // standardize on firefox
+  color: $input-color; // standardize on firefox
   display: block;
   height: $input-height;
   line-height: $input-line-height;
@@ -48,6 +44,7 @@ select {
 ::placeholder {
   @include base-font-size;
   font-family: $base-font-family;
+  color: $input-placeholder-color;
 }
 
 select {

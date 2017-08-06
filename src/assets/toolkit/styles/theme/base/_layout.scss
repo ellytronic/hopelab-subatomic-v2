@@ -11,6 +11,13 @@
   }
 }
 
+.text-section {
+  max-width: $text-container-width;
+  margin: 0 auto;
+}
+
 .full-container {
   @include full-container;
 }
+
+
