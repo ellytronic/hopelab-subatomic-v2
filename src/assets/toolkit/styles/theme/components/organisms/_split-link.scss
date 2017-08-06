@@ -1,0 +1,50 @@
+@import "../../utilities/utilities";
+
+.split-link {
+  position: relative;
+
+  @include grid-media($media-md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.split-link_block {
+  width: 100%;
+
+  @include grid-media($media-md) {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.split-link_action {
+  $background-color: color(primary);
+  height: 100vw;
+  position: relative;
+
+  @include grid-media($media-md) {
+    height: auto;
+  }
+
+  a {
+    @include position(absolute, 0 0 0 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+
+    &:hover {
+      background-color: darken($background-color, 5%);
+    }
+  }
+}
+
+.split-link_image {
+
+}

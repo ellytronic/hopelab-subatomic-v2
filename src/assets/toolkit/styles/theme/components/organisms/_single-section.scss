@@ -51,3 +51,42 @@
     }
   }
 }
+
+.center-section {
+  @include grid-media($media-md) {
+    @include grid-column(5);
+    float: none;
+    margin: 0 auto;
+    width: 57.5rem;
+  }
+}
+
+.text-section {
+  $text-grid: (
+    columns: 12,
+    gutter: 5rem,
+  );
+
+  @include grid-container;
+  max-width: $text-container-width;
+  margin: 0 auto;
+
+  &.bg-primary-alt {
+    background-color: color(primary-alt);
+  }
+
+  .text-section_container {
+    @include grid-container;
+
+    @include grid-media($media-lg) {
+      @include grid-collapse($text-grid);
+    }
+  }
+
+  .text-section_column {
+    @include grid-media($media-lg) {
+      @include grid-column(6, $text-grid);
+    }
+  }
+}
+
