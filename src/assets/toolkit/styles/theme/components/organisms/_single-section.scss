@@ -5,7 +5,8 @@
 
   .content-group,
   .video-embed,
-  .inline-gallery {
+  .inline-gallery,
+  .blocks {
     padding-bottom: 10rem;
   }
 
@@ -72,7 +73,7 @@
   margin: 0 auto;
 
   &.bg-primary-alt {
-    background-color: color(primary-alt);
+    background-color: color(primary-alt-light);
   }
 
   .text-section_container {
@@ -89,4 +90,3 @@
     }
   }
 }
-
