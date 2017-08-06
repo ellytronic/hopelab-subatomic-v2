@@ -1,0 +1,33 @@
+.contact-group {
+  margin-bottom: 7rem;
+
+  @include grid-media($media-lg) {
+    margin-bottom: 14rem;
+  }
+    
+  h2 {
+    margin-bottom: 7rem;
+
+    @include grid-media($media-lg) {
+      margin-bottom: 14rem;
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    margin-bottom: 4rem;
+  }
+
+  .button {
+    margin-top: 7rem;
+
+    @include grid-media($media-lg) {
+      margin-top: 14rem;
+    }
+  }
+
+  .form-message {
+    color: color(grey-light);
+  }
+}

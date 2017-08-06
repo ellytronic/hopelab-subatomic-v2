@@ -2,4 +2,15 @@
 
 .button {
   font-family: $sans-bold-family;
+
+  &.small {
+    font-size: 1.7rem;
+
+    @include padding(1.7rem 7rem);
+
+    @include grid-media($media-md) {
+      font-size: 1.8rem;
+      @include padding(2.5rem null);
+    }
+  }
 }
