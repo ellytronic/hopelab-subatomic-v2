@@ -1,10 +1,12 @@
 @import "../../utilities/utilities";
 
 .single-section {
+  padding-top: 10rem;
+
   .content-group,
   .video-embed,
   .inline-gallery {
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
   }
 
   .video-embed {
