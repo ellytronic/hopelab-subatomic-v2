@@ -21,8 +21,42 @@
       margin-bottom: 0;
     }
 
+    &:last-child {
+      @include grid-media($media-md) {
+        padding-top: 20rem;
+      }
+    }
+
     img {
       width: 100%;
+    }
+  }
+}
+
+
+// .inline-gallery {
+//   @include container;
+//   margin-bottom: 10rem;
+// }
+
+.inline-gallery_image {
+  &:nth-child(odd) {
+    @include grid-media($media-sm-below) {
+      margin-left: -5rem;
+    }
+  }
+
+  &:nth-child(even) {
+    @include grid-media($media-sm-below) {
+      margin-right: -5rem;
+    }
+  }
+
+  figcaption {
+    margin-left: 5rem;
+
+    @include grid-media($media-md) {
+      margin-left: 0;
     }
   }
 }

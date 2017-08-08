@@ -25,6 +25,11 @@
   }
 
   &.blocks--steps .block {
+    padding-bottom: 10rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 0;
+    }
 
     &:nth-child(2) {
       @include grid-media($media-md) {
@@ -36,6 +41,11 @@
       @include grid-media($media-lg) {
         padding-top: 80rem;
       }
+    }
+
+    .block_content {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

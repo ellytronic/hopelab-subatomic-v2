@@ -3,13 +3,19 @@
 <div class="page-container">
   <div class="single-section center-section">
     {{> content-group}}
-    {{> video-embed}}
-    <div class="full-container">
-      {{> inline-gallery}}
-    </div>
   </div>
 </div>
 
-{{> block-section}}
+<div class="page-container">
+  <div class="single-section scale-section">
+    {{> video-embed}}
+  </div>
+</div>
 
+<div class="page-container">
+  <div class="single-section">
+    {{> inline-gallery}}
+  </div>
+</div>
+{{> block-section}}
 {{> footer}}
