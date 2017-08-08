@@ -1,0 +1,93 @@
+.text-section {
+  $text-grid-md: (
+    columns: 6,
+    gutter: 5rem,
+  );
+
+  $text-grid-lg: (
+    columns: 12,
+    gutter: 8rem,
+  );
+
+  .text-section_container {
+    @include grid-container;
+
+    @include grid-media($media-md) {
+      @include grid-collapse($text-grid-md);
+    }
+
+    @include grid-media($media-lg) {
+      @include grid-collapse($text-grid-lg);
+    }
+  }
+
+  .text-section_column {
+    @include grid-media($media-md) {
+      @include grid-column(5, $text-grid-md);
+    }
+
+    @include grid-media($media-lg) {
+      @include grid-column(6, $text-grid-lg);
+    }
+  }
+
+  &.has-offset {
+    $text-grid-md: (
+      columns: 6,
+      gutter: 5rem,
+    );
+
+    $text-grid-lg: (
+      columns: 12,
+      gutter: 8rem,
+    );
+
+    .text-section_container {
+      @include grid-media($media-lg) {
+        @include grid-collapse($text-grid-lg);
+      }
+    }
+
+    .text-section_column {
+      .quote-group {
+        margin-left: 5rem;
+        margin-bottom: 10rem;
+      }
+
+      @include grid-media($media-md) {
+        @include grid-column(6, $text-grid-md);
+        
+        .quote-group {
+          margin-bottom: 15rem;
+        }
+      }
+
+      @include grid-media($media-md-only) {
+        .content-group {
+          margin-left: 12rem;
+        }
+      }
+
+      &:first-child {
+        @include grid-media($media-lg) {
+          @include grid-column(7, $text-grid-lg);
+
+          .content-group {
+            margin-left: 30%;
+          }
+
+          .quote-group {
+            margin-right: 8rem;
+          }
+        }
+      }
+
+      &:last-child {
+        @include grid-media($media-lg) {
+          @include grid-column(5, $text-grid-lg);
+          margin-top: 40rem;
+        }
+      }
+    }
+  }
+}

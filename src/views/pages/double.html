@@ -1,28 +1,32 @@
 {{> navbar}}
+
 <div class="page-container">
   {{> leader-text classes="is-cover leader-float"}}
 </div>
+
 <div class="page-container bg-primary-alt">
-  <div class="single-section text-section">
-    <div class="text-section_container">
-      <div class="text-section_column">
-        {{> content-group}}
-      </div>
-    </div>
+  <div class="single-section wide-section top">
+    {{> text-section }}
   </div>
-  <div class="single-section">
+</div>
+
+<div class="page-container bg-primary-alt">
+  <div class="single-section wide-section">
     {{> blocks-captions}}
   </div>
 </div>
+
 <div class="page-container">
-  <div class="single-section text-section">
-    <div class="text-section_container">
-      <div class="text-section_column">
-        {{> content-group}}
-      </div>
-    </div>
+  <div class="single-section wide-section top">
+    {{> text-section }}
   </div>
 </div>
+
+<div class="page-container">
+  <div class="single-section wide-section">
+    {{> text-section-offset }}
+  </div>
 </div>
+
 {{> split-link}}
 {{> footer}}

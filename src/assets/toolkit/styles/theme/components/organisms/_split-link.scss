@@ -42,6 +42,11 @@
   img {
     display: block;
   }
+
+  figure, img {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .split-link_action {

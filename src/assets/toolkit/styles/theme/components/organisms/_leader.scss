@@ -1,17 +1,13 @@
 
 .leader {
-  @include full-container;
   @include navbar-offset;
-
-  &.bg-primary-alt {
-    background-color: color(primary-alt);
-  }
 }
 
 .leader_container {
-  @include container;
+  @include grid-container;
   padding-bottom: 5rem;
-  max-width: 144rem;
+  max-width: $text-container-width;
+  margin: 0 auto;
 }
 
 .leader_grid {
@@ -58,34 +54,47 @@
 }
 
 .leader-float {
-
   .leader_grid {
-    $leader-grid: (
+    $leader-grid-lg: (
       columns: 12,
       gutter: 5rem,
     );
 
-    @include grid-media($media-lg) {
-      @include grid-collapse($leader-grid);
-      display: flex;
+    $leader-grid-md: (
+      columns: 6,
+      gutter: 5rem,
+    );
 
+    @include grid-media($media-md) {
+      @include grid-collapse($leader-grid-lg);
+    }
+
+    @include grid-media($media-lg) {
+      @include grid-collapse($leader-grid-md);
+    }
+
+    .leader_column {
       &:first-child {
         @include cover-height;
       }
 
-      &:last-child {
-        display: inline;
+      @include grid-media($media-md) {
+        @include grid-column(5, $leader-grid-md);
       }
-    }
 
-    .leader_column {
       @include grid-media($media-lg) {
-        @include grid-column(6, $leader-grid);
+        @include grid-column(6, $leader-grid-lg);
       }
 
-      &.right {
+      &:last-child {
+        margin-left: 5rem;
+
+        @include grid-media($media-md) {
+          @include grid-push(1, $leader-grid-md);
+        }
+
         @include grid-media($media-lg) {
-          @include grid-push(6, $leader-grid);
+          @include grid-push(6, $leader-grid-lg);
         }
       }
     }

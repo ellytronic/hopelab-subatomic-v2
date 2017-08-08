@@ -1,12 +1,13 @@
 @mixin cover-height() {
   position: relative;
   min-height: 40rem;
+  padding-top: 12rem;
 
   @include grid-media($media-md) {
     min-height: 50rem;
   }
 
   @include grid-media($media-lg) {
-    height: 60vh;
+    min-height: 60vh;
   }
 }
