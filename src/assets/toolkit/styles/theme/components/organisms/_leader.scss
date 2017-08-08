@@ -10,10 +10,6 @@
   margin: 0 auto;
 }
 
-.leader_grid {
-
-}
-
 .leader_image {
   margin-bottom: 5rem;
 
@@ -34,22 +30,6 @@
   h1 {
     @include h1();
     margin-bottom: 4rem;
-  }
-}
-
-.leader-flex {
-  .leader_grid {
-    @include grid-media($media-lg) {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-
-    .leader_column {
-      @include grid-media($media-lg) {
-        width: 50%;
-        margin-bottom: 10rem;
-      }
-    }
   }
 }
 
@@ -96,6 +76,27 @@
         @include grid-media($media-lg) {
           @include grid-push(6, $leader-grid-lg);
         }
+      }
+    }
+  }
+}
+
+// Contact page leader
+.leader-flex {
+  .leader_container {
+    max-width: none;
+  }
+
+  .leader_grid {
+    @include grid-media($media-lg) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .leader_column {
+      @include grid-media($media-lg) {
+        width: 50%;
+        margin-bottom: 10rem;
       }
     }
   }

@@ -1,7 +1,13 @@
+@import "../../utilities/utilities";
+
 .page-container {
   @include container;
 
   &.bg-primary-alt {
+    background-color: color(primary-alt);
+  }
+
+  &.bg-primary-alt-light {
     background-color: color(primary-alt-light);
   }
 }
