@@ -4,14 +4,15 @@
   position: relative;
 
   &.full {
-    .carousel_frame {
+    @include clearfix;
+
+    figure {
       @include full-container;
     }
   }
 }
 
 .carousel_frame {
-  overflow: hidden;
   width: 100%;
 }
 
@@ -24,13 +25,72 @@
   figure, img {
     width: 100%;
     max-width: none;
+    display: block;
+  }
+}
+
+.carousel_caption {
+  @include position(absolute, null null -6rem 0);
+  font-family: $font-serif;
+  font-size: 1.3rem;
+  float: left;
+  padding: 0;
+
+  @include grid-media($media-md) {
+    @include position(relative, null null auto auto);
+    font-size: 1.4rem;
+    padding-top: 3rem;
+  }
+}
+
+.carousel_controls {
+  @include position(absolute, null null 2.5rem 0);
+
+  @include grid-media($media-md) {
+    @include position(relative, null null auto auto);
+    float: right;
+    padding-top: 3rem;
+  }
+
+  svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    color: color(white);
+
+    @include grid-media($media-md) {
+      height: 3rem;
+      width: 3rem;
+      color: color(base);
+    }
+  }
+
+  .carousel_arrow--sm {
+    @include grid-media($media-md) {
+      display: none;
+    }
+  }
+
+  .carousel_arrow--md {
+    display: none;
+
+    @include grid-media($media-md) {
+      display: block;
+    }
   }
 }
 
 .carousel_prev {
-  @include position(absolute, null 8rem -4rem null);
+  margin-right: 0;
+
+  @include grid-media($media-md) {
+    margin-right: 5rem;
+  }
 }
 
 .carousel_next {
-  @include position(absolute, null 1rem -4rem null);
+  margin-left: 4rem;
+
+  @include grid-media($media-md) {
+    margin-left: 0;
+  }
 }

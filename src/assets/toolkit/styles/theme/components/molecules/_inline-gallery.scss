@@ -14,14 +14,30 @@
   }
 
   .inline-gallery_image {
-    margin-bottom: 3rem;
+    margin-bottom: 12rem;
 
     @include grid-media($media-md) {
       @include grid-column(6, $inline-grid);
       margin-bottom: 0;
     }
 
+    &:nth-child(odd) {
+      @include grid-media($media-sm-below) {
+        margin-left: -2.5rem;
+        margin-right: 2.5rem;
+      }
+    }
+
+    &:nth-child(even) {
+      @include grid-media($media-sm-below) {
+        margin-right: -2.5rem;
+        margin-left: 2.5rem;
+      }
+    }
+
     &:last-child {
+      margin-bottom: 0;
+
       @include grid-media($media-md) {
         padding-top: 20rem;
       }
@@ -30,32 +46,13 @@
     img {
       width: 100%;
     }
-  }
-}
 
-// .inline-gallery {
-//   @include container;
-//   margin-bottom: 10rem;
-// }
+    figcaption {
+      margin-left: 5rem;
 
-.inline-gallery_image {
-  &:nth-child(odd) {
-    @include grid-media($media-sm-below) {
-      margin-left: -5rem;
-    }
-  }
-
-  &:nth-child(even) {
-    @include grid-media($media-sm-below) {
-      margin-right: -5rem;
-    }
-  }
-
-  figcaption {
-    margin-left: 5rem;
-
-    @include grid-media($media-md) {
-      margin-left: 0;
+      @include grid-media($media-md) {
+        margin-left: 0;
+      }
     }
   }
 }

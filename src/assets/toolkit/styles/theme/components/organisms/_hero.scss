@@ -16,6 +16,18 @@
   &.bg-primary-alt-light {
     background-color: color(primary-alt-light);
   }
+
+  &.bg-offset-top {
+    box-shadow: inset 0 14rem 0 0 color(white);
+
+    @include grid-media($media-md) {
+      box-shadow: inset 0 16rem 0 0 color(white);
+    }
+
+    @include grid-media($media-lg) {
+      box-shadow: inset 0 20rem 0 0 color(white);
+    }
+  }
 }
 
 .hero-header {

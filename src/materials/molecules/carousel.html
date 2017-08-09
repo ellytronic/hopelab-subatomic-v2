@@ -3,16 +3,21 @@
     <div class="carousel_slides">
       <li class="carousel_slide">
         {{> figure image="http://via.placeholder.com/1440x810"}}
+        <p class="carousel_caption">Some fun caption</p>
       </li>
 <!--       <li class="carousel_slide">
         {{> figure image="http://via.placeholder.com/1440x810"}}
       </li> -->
     </div>
   </div>
-  <button class="carousel_prev icon-only-button">
-    {{> icon svg="arrow-left"}}
-  </button>
-  <button class="carousel_next icon-only-button">
-    {{> icon svg="arrow-right"}}
-  </button>
+  <div class="carousel_controls">
+    <button class="carousel_prev icon-only-button">
+      <span class="carousel_arrow--sm">{{> icon svg="carrot-left"}}</span>
+      <span class="carousel_arrow--md">{{> icon svg="arrow-left"}}</span>
+    </button>
+    <button class="carousel_next icon-only-button">
+      <span class="carousel_arrow--sm">{{> icon svg="carrot-right"}}</span>
+      <span class="carousel_arrow--md">{{> icon svg="arrow-right"}}</span>
+    </button>
+  </div>
 </div>

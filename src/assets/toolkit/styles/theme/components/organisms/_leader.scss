@@ -58,10 +58,12 @@
         @include cover-height;
         align-items: flex-end; 
         display: flex;
+        padding-top: 12rem;
       }
 
       @include grid-media($media-md) {
         @include grid-column(5, $leader-grid-md);
+        padding-top: 0;
       }
 
       @include grid-media($media-lg) {

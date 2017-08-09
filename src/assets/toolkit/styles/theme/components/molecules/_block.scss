@@ -19,14 +19,6 @@
   }
 }
 
-.block_content {
-  @include padding(null 5.5rem);
-
-  @include grid-media($media-md) {
-    padding: 0;
-  }
-}
-
 .block_title {
   @include h3();
   font-weight: normal;
