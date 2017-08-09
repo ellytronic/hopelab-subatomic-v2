@@ -9,6 +9,10 @@
     @include padding(8.5rem null);
   }
 
+  &.bg-white {
+    background-color: color(white);
+  }
+
   .navbar-container {
     @include container;
   }

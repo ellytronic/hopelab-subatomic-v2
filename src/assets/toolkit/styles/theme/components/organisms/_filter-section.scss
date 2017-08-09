@@ -2,11 +2,17 @@
 
 .filter-section {
   @include grid-container;
-  padding-top: 18rem;
+}
 
-  @include grid-media($media-md) {
-    padding-top: 20rem;
-  }
+.filter-section_container {
+  @include cover-height;
+  @include navbar-offset;
+  align-items: flex-end; 
+  display: flex;
+}
+
+.filter-section_header {
+  width: 100%;
 }
 
 .filter-section_title {
@@ -18,6 +24,7 @@
 }
 
 .filter-section_menu {
+  display: inline-block;
   margin-bottom: 5rem;
 
   @media (min-width: 1200px) {

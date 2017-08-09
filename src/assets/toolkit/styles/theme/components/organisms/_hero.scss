@@ -8,6 +8,14 @@
   &.bg-primary-alt {
     background-color: color(primary-alt);
   }
+
+  &.bg-secondary-light {
+    background-color: color(secondary-lighter);
+  }
+
+  &.bg-primary-alt-light {
+    background-color: color(primary-alt-light);
+  }
 }
 
 .hero-header {
