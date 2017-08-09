@@ -2,35 +2,35 @@
 
 .single-section {
 
-  &.top {
-    padding-top: 15rem;
-  }
-
+  &.top,
   .content-group,
   .video-embed,
   .inline-gallery,
   .blocks {
-    padding-bottom: 15rem;
+    padding-bottom: 12rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 15rem;
+    }
   }
 
   .carousel {
-    margin-bottom: 15rem;
+    margin-bottom: 16rem;
+
+    @include grid-media($media-md) {
+      margin-bottom: 15rem;
+    }
   }
 
-  // .video-embed {
-  //   margin-left: -2.5rem;
-  //   margin-right: -2.5rem;
+  .video-embed {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
 
-  //   @include grid-media($media-md) {
-  //     margin-left: -5rem;
-  //     margin-right: -5rem;
-  //   }
-
-  //   @include grid-media($media-lg) {
-  //     margin-left: -10rem;
-  //     margin-right: -10rem;
-  //   }
-  // }
+    @include grid-media($media-md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 .wide-section {
