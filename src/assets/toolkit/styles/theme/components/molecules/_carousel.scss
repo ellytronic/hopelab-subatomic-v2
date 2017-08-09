@@ -1,0 +1,36 @@
+@import "../../utilities/utilities";
+
+.carousel {
+  position: relative;
+
+  &.full {
+    .carousel_frame {
+      @include full-container;
+    }
+  }
+}
+
+.carousel_frame {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel_slides {
+  @include unstyled-list();
+  width: 100%;
+}
+
+.carousel_slide {
+  figure, img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.carousel_prev {
+  @include position(absolute, null 8rem -4rem null);
+}
+
+.carousel_next {
+  @include position(absolute, null 1rem -4rem null);
+}
