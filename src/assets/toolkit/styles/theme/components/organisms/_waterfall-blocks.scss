@@ -4,10 +4,6 @@
   .block {
     padding-bottom: 12rem;
 
-    // &:nth-child(4n) {
-    //   clear: both;
-    // }
-
     .block_content {
       @include padding(null 2.5rem);
 

@@ -9,6 +9,26 @@
       @include underline-link;
     }
   }
+
+  &.minor {
+    margin-bottom: 7.5rem;
+    
+    .block_image {
+      margin-bottom: 2rem;
+    }
+
+    .block_title {
+      @include h5();
+      font-family: $sans-bold-family;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .block_subtitle {
+      @include h5;
+      font-family: $font-sans;
+    }
+  }
 }
 
 .block_image {

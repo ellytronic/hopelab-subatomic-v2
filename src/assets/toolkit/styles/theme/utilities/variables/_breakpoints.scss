@@ -4,7 +4,27 @@ $neat-grid: (
 );
 
 $max-container-width: none;
-$text-container-width: 124rem;
+$text-container-width: 1240px;
+
+// Breakpoint Boundaries
+
+/// Lower Boundary for extra small screens
+$screen-xs-min:               0px;
+
+/// Lower boundary for small screens
+$screen-sm-min:               576px;
+
+/// Lower boundary for medium screens
+$screen-md-min:               768px;
+
+/// Lower boundary for large screens
+$screen-lg-min:               992px;
+
+/// Lower boundary for extra large screens
+$screen-xl-min:               $text-container-width;
+
+/// Upper boundary for large screens
+$screen-xl-max:               $screen-xl-min - 1px;
 
 $media-sm-below: (
     media: 'only screen and (max-width: #{$screen-sm-max})',
