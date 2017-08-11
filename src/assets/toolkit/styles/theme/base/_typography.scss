@@ -13,19 +13,18 @@ h3,
 h4,
 h5 {
   font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   text-rendering: optimizeLegibility;
-// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 a {
   text-decoration: none;
