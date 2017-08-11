@@ -80,4 +80,24 @@
       }
     }
   }
+
+  &.blocks--steps .block {
+    padding-bottom: 10rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      @include grid-media($media-md) {
+        padding-top: 40rem;
+      }
+    }
+
+    &:nth-child(3) {
+      @include grid-media($media-lg) {
+        padding-top: 80rem;
+      }
+    }
+  }
 }

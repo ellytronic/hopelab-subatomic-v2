@@ -59,3 +59,30 @@
   }
 }
 
+=======
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.wide-section {
+  @include grid-container;
+  max-width: $text-container-width;
+  margin: 0 auto;
+}
+
+.center-section {
+  @include grid-media($media-md) {
+    margin: 0 auto;
+    width: 57.5rem;
+  }
+}
+
+.scale-section {
+  @include grid-media($media-md) {
+    margin: 0 17.5%;
+  }
+}
+
+>>>>>>> 488297dad4bbb7116822b160c06498ed10f469f4
