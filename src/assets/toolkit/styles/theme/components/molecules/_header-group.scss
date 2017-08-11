@@ -2,6 +2,8 @@
 
 .header-group {
   text-align: center;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 
   @include grid-media($media-md) {
     @include grid-column(10);

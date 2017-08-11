@@ -24,35 +24,9 @@
 }
 
 .filter-section_menu {
-  display: inline-block;
-  margin-bottom: 5rem;
-
   @media (min-width: 1200px) {
     margin-bottom: 20rem;
     float: right;
     line-height: 5rem;
-  }
-
-  ul {
-    @include unstyled-list;
-    @include grid-container;
-  }
-
-  ul > li {
-    font-family: $sans-bold-family;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-
-    @media (min-width: 1200px) {
-      display: inline-block;
-      margin-left: 5rem;
-      margin-bottom: 0;
-    }
-  }
-
-  svg {
-    vertical-align: middle;
-    height: 1.5rem;
-    width: 1.5rem;
   }
 }

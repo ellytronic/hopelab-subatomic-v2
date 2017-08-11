@@ -1,5 +1,6 @@
 body {
   text-rendering: optimizeLegibility;
+  // -webkit-font-smoothing: antialiased;
   
   @include grid-media($media-md) {
     font-size: $base-font-size-large;
@@ -12,6 +13,8 @@ h3,
 h4,
 h5 {
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 

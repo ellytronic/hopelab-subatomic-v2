@@ -31,7 +31,13 @@
     float: left;
   }
 
-  .blocks {
-    
+  .block {
+    margin-bottom: 10rem;
+
+    &:nth-child(2) {
+      @include grid-media($media-lg) {
+        margin-top: 20rem;
+      }
+    }
   }
 }

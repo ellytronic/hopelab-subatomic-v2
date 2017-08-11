@@ -1,8 +1,13 @@
 @import "../../utilities/utilities";
 
-.inline-gallery_container {
+.inline-gallery {
   $inline-grid: (
     columns: 12,
+    gutter: 5.75%,
+  );
+
+  $inline-grid-tryptic: (
+    columns: 10,
     gutter: 5.75%,
   );
 
@@ -13,6 +18,7 @@
     margin-right: -6.25%;
   }
 
+  // Default 2 column 50/50
   .inline-gallery_image {
     margin-bottom: 12rem;
 
@@ -35,14 +41,6 @@
       }
     }
 
-    &:last-child {
-      margin-bottom: 0;
-
-      @include grid-media($media-md) {
-        padding-top: 20rem;
-      }
-    }
-
     img {
       width: 100%;
     }
@@ -52,6 +50,68 @@
 
       @include grid-media($media-md) {
         margin-left: 0;
+      }
+    }
+
+    // Push last child down
+    &:last-child {
+      margin-bottom: 0;
+
+      @include grid-media($media-md) {
+        padding-top: 20rem;
+      }
+    }
+  }
+
+  // Two column 7/3 columns
+  &.tryptic {
+    .inline-gallery_image {
+      padding-top: 0;
+      padding-bottom: 5rem;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        @include grid-media($media-lg) {
+          @include grid-column(3, $inline-grid-tryptic);
+        }
+      }
+
+      &:nth-child(2) {
+        @include grid-media($media-md) {
+          margin-top: 5.75%,
+        }
+
+        @include grid-media($media-lg) {
+          @include grid-column(7, $inline-grid-tryptic);
+          float: right;
+          margin-right: 5.75%;
+        }
+      }
+    }
+  }
+
+  &.tryptic--left {
+    .inline-gallery_image {
+      &:nth-child(1) {
+        @include grid-media($media-md) {
+          margin-top: 5.75%,
+        }
+
+        @include grid-media($media-lg) {
+          @include grid-column(7, $inline-grid-tryptic);
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+         @include grid-media($media-md) {
+          margin-top: 0,
+        }
+
+        @include grid-media($media-lg) {
+          @include grid-column(3, $inline-grid-tryptic);
+          margin-top: 0;
+        }
       }
     }
   }
