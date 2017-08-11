@@ -11,20 +11,18 @@
   height: 100vw;
 
   @include grid-media($media-md) {
-
+    height: 56.25vw;
   }
 
   @include grid-media($media-lg) {
 
   }
-
-  @include grid-media($media-xl) {
-
-  }
 }
 
 .figure_container {
-
+  @include position(absolute, 0 0 0 0);
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .figcaption {

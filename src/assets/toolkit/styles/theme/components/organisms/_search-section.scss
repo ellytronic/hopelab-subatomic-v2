@@ -1,0 +1,25 @@
+@import "../../utilities/utilities";
+
+.search-section {
+  @include padding(5rem null);
+  margin-bottom: 10rem;
+
+  @include grid-media($media-md) {
+    @include padding(8.5rem null);
+  }
+}
+
+.search-section_input {
+  @include h1();
+  height: 5rem;
+  font-family: $font-serif;
+  border-bottom: none;
+  color: color(secondary);
+  max-width: 100%;
+
+  &::placeholder {
+    @include h1();
+    font-family: $font-serif;
+    color: color(secondary);
+  }
+}

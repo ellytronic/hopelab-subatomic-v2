@@ -4,10 +4,6 @@
   a {
     text-decoration: none;
     color: color(base);
-
-    &:hover {
-      @include underline-link;
-    }
   }
 
   &.minor {
@@ -43,6 +39,12 @@
   @include h3();
   font-weight: normal;
   margin-bottom: 2rem;
+
+  a {
+    &:hover {
+      @include underline-link;
+    }
+  }
 }
 
 .block_subtitle {

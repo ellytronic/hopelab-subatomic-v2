@@ -9,6 +9,7 @@
   @include navbar-offset;
   align-items: flex-end; 
   display: flex;
+  width: 100%;
 }
 
 .filter-section_header {
@@ -24,9 +25,24 @@
 }
 
 .filter-section_menu {
+  position: relative;
+  width: 100%;
+
   @media (min-width: 1200px) {
-    margin-bottom: 20rem;
     float: right;
     line-height: 5rem;
+    width: auto;
   }
+
+  .menu-icon {
+    @include position(absolute, 0 0 null null);
+
+    @media (min-width: 1200px) {
+      position: relative;
+    }
+  }
+}
+
+.filter-section_search {
+
 }

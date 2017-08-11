@@ -60,6 +60,6 @@
 
 @mixin underline-link {
   text-decoration: underline;
-  text-decoration-color: color(grey-lighter);
+  text-decoration-color: rgba(color(base), .15);
   text-decoration-skip: ink;
 }
