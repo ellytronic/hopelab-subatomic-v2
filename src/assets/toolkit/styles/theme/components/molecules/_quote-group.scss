@@ -5,6 +5,9 @@
     @include h1();
     font-family: $font-serif;
     line-height: 1.41;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   cite {

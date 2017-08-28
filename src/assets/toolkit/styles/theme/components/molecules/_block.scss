@@ -47,6 +47,11 @@
   }
 }
 
+.block_subtext {
+  display: block;
+  font-style: italic;
+}
+
 .block_subtitle {
   @include h5();
   font-family: $sans-bold-family;

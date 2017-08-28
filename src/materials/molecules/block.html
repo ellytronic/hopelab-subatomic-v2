@@ -2,7 +2,14 @@
   <div class="block_image"><a href="#"><img src="{{default image 'http://via.placeholder.com/768x961'}}"></a></div>
   <div class="block_content">
     {{#if title}}
-    <h4 class="block_title"><a href="#">{{default title 'The Key to Health and Happiness for City Dwellers'}}</a></h4>
+    <h3 class="block_title"><a href="#">{{default title 'The Key to Health and Happiness for City Dwellers'}}
+    {{/if}}
+    {{#if subtext}}
+    <span class="block_subtext">{{default subtext 'The Key to Health and Happiness for City Dwellers'}}</span>
+    {{/if}}
+    {{#if title}}
+    </a>
+    </h3>
     {{/if}}
     {{#if subtitle}}
     <p class="block_subtitle"><a href="#">{{default category 'Technology'}}</a></p>

@@ -6,7 +6,6 @@
 
 .filter-section_container {
   @include cover-height;
-  @include navbar-offset;
   align-items: flex-end; 
   display: flex;
   width: 100%;

@@ -108,5 +108,31 @@
 }
 
 .leader-feature {
+  .leader_container {
+    max-width: none;
+  }
 
+  .leader_column {
+   &:first-child {
+      @include cover-height;
+      display: flex;
+      align-items: flex-end; 
+    }
+
+    @include grid-media($media-md) {
+      width: 83.33%;
+    }
+
+    @include grid-media($media-lg) {
+      width: 50%;
+    }
+  }
+
+  .leader_header {
+    @include padding(0 2.5rem);
+  }
+
+  h1 {
+    @include h2()
+  }
 }

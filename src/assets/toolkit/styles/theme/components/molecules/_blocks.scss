@@ -81,7 +81,7 @@
     }
   }
 
-  // Adds vertical spacing offsets
+  // Adds empty cell to grid
   &.blocks--push .block {
     padding-bottom: 10rem;
 
@@ -104,6 +104,41 @@
       @include grid-media($media-lg) {
         @include grid-push(4, $block-grid-lg);
       }
+    }
+  }
+}
+
+.block--feature .block {
+  margin-left: 0;
+
+  @include grid-media($media-md) {
+    margin-left: 16.5%;
+  }
+
+  @include grid-media($media-lg) {
+    margin-left: 8.75%;
+  }
+
+  // should be a mixin , take from waterfall blocks
+  .block_content {
+    @include padding(null 2.5rem);
+
+    @include grid-media($media-md) {
+      padding: 0;
+    }
+  }
+
+  &:nth-child(odd) .block_image {
+    @include grid-media($media-sm-below) {
+      margin-left: -2.5rem;
+      margin-right: 2.5rem;
+    }
+  }
+
+  &:nth-child(even) .block_image {
+    @include grid-media($media-sm-below) {
+      margin-right: -2.5rem;
+      margin-left: 2.5rem;
     }
   }
 }
