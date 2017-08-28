@@ -81,22 +81,28 @@
     }
   }
 
-  &.blocks--steps .block {
+  // Adds vertical spacing offsets
+  &.blocks--push .block {
     padding-bottom: 10rem;
 
     @include grid-media($media-md) {
       padding-bottom: 0;
     }
 
-    &:nth-child(2) {
+    &:nth-child(even) {
       @include grid-media($media-md) {
         padding-top: 40rem;
+        padding-bottom: 10rem;
+      }
+
+      @include grid-media($media-lg) {
+        padding-top: 0;
       }
     }
 
     &:nth-child(3) {
       @include grid-media($media-lg) {
-        padding-top: 80rem;
+        @include grid-push(4, $block-grid-lg);
       }
     }
   }
