@@ -9,6 +9,10 @@
   align-items: flex-end; 
   display: flex;
   width: 100%;
+
+  @include grid-media($media-lg) {
+    min-height: 25vh;
+  }
 }
 
 .filter-section_header {
