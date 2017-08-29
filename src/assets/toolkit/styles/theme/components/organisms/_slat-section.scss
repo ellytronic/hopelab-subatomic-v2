@@ -32,7 +32,11 @@
 .slat_subtitle {
   font-family: $sans-bold-family;
   font-size: 1.6rem;
-  float: right;
+  display: block;
+
+  @include grid-media($media-lg) {
+    float: right;
+  }
 }
 
 .slat-section_footer {

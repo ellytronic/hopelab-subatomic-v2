@@ -109,14 +109,23 @@
 
 .leader-feature {
   .leader_container {
-    max-width: none;
+    max-width: 134rem;
+    margin: 0;
   }
 
   .leader_column {
-   &:first-child {
+    &:first-child {
       @include cover-height;
       display: flex;
-      align-items: flex-end; 
+      align-items: flex-end;
+
+      @include grid-media($media-md) {
+        min-height: 40vh;
+      }
+
+      @include grid-media($media-lg) {
+        min-height: 40vh;
+      }
     }
 
     @include grid-media($media-md) {
@@ -129,7 +138,9 @@
   }
 
   .leader_header {
-    @include padding(0 2.5rem);
+    @include grid-media($media-sm-below) {
+      @include padding(0 2.5rem);
+    }
   }
 
   h1 {

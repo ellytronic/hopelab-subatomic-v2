@@ -63,6 +63,29 @@
     }
   }
 
+  // One
+  &.single {
+    .inline-gallery_image {
+      @include grid-media($media-md) {
+        @include grid-column(12, $inline-grid);
+        margin-bottom: 0;
+      }
+
+      &:nth-child(odd),
+      &:nth-child(even) {
+        @include grid-media($media-sm-below) {
+          margin: 0;
+        }
+      }
+
+      &:last-child {
+        @include grid-media($media-md) {
+          padding: 0;
+        }
+      }
+    }
+  } 
+
   // Two column 7/3 columns
   &.tryptic {
     .inline-gallery_image {
