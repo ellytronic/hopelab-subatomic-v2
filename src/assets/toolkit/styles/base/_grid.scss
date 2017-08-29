@@ -11,6 +11,8 @@
 
 // Grid items
 .column {
+  float: left;
+
   &.small {
     @for $i from 1 through 12 {
       &-#{$i} {

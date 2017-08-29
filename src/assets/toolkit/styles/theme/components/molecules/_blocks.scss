@@ -30,6 +30,17 @@
     }
   }
 
+  .link-more {
+    display: block;
+    float: right;
+    padding-top: 10rem;
+    margin-right: 6.5%;
+
+    @include grid-media($media-lg) {
+      padding-top: 15rem;
+    }
+  }
+
   &.two-column {
     .block {
       @include grid-media($media-md) {
