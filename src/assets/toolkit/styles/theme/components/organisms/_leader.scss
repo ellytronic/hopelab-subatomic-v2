@@ -141,6 +141,14 @@
     @include grid-media($media-sm-below) {
       @include padding(0 2.5rem);
     }
+
+    .content-group {
+      max-width: 50rem;
+
+      @include grid-media($media-md) {
+        max-width: none;
+      }
+    }
   }
 
   h1 {

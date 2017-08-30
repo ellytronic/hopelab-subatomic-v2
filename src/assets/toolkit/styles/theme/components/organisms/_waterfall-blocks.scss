@@ -2,7 +2,11 @@
 
 .waterfall-blocks {
   .block {
-    padding-bottom: 12rem;
+    margin-bottom: 10rem;
+    
+    @include grid-media($media-md) {
+      margin-bottom: 0;
+    }
 
     .block_content {
       @include padding(null 2.5rem);
@@ -12,17 +16,27 @@
       }
     }
 
-    &:nth-child(odd) .block_image {
-      @include grid-media($media-sm-below) {
-        margin-left: -2.5rem;
-        margin-right: 2.5rem;
+    &:nth-child(even) {
+      .block_image,
+      &.bg-primary-light,
+      &.bg-primary-alt-light,
+      &.bg-secondary-light {
+        @include grid-media($media-sm-below) {
+          margin-left: -2.5rem;
+          margin-right: 2.5rem;
+        }
       }
     }
 
-    &:nth-child(even) .block_image {
-      @include grid-media($media-sm-below) {
-        margin-right: -2.5rem;
-        margin-left: 2.5rem;
+    &:nth-child(odd) {
+      .block_image,
+      &.bg-primary-light,
+      &.bg-primary-alt-light,
+      &.bg-secondary-light {
+        @include grid-media($media-sm-below) {
+          margin-right: -2.5rem;
+          margin-left: 2.5rem;
+        }
       }
     }
   }
