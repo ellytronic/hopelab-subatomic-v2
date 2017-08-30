@@ -16,3 +16,13 @@
     color: color(grey-light);
   }
 }
+
+.content-title {
+  @include h1()
+  margin-bottom: 5rem;
+}
+
+.content-subtitle {
+  font-family: $sans-bold-family;
+  margin-bottom: 4rem;
+}

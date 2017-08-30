@@ -15,6 +15,7 @@
 
   .navbar-container {
     @include container;
+    position: relative;
   }
 
   .logo {
