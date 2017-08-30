@@ -13,7 +13,8 @@
   .content-group,
   .video-embed,
   .inline-gallery,
-  .blocks {
+  .blocks,
+  .carousel {
     padding-bottom: 12rem;
 
     @include grid-media($media-md) {
@@ -26,6 +27,10 @@
 
     @include grid-media($media-md) {
       margin-bottom: 15rem;
+    }
+
+    .content-group {
+      padding-bottom: 0;
     }
   }
 

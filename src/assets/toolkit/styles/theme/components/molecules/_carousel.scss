@@ -6,7 +6,7 @@
   &.full {
     @include clearfix;
 
-    figure {
+    .carousel_figure {
       @include full-container;
     }
   }
@@ -22,7 +22,8 @@
 }
 
 .carousel_slide {
-  figure, img {
+  .carousel_figure,
+  .carousel_figure img {
     width: 100%;
     max-width: none;
     display: block;
