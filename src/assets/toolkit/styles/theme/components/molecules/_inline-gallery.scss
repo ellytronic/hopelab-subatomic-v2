@@ -65,10 +65,12 @@
 
   // One
   &.single {
+    margin: 0;
+
     .inline-gallery_image {
       @include grid-media($media-md) {
-        @include grid-column(12, $inline-grid);
-        margin-bottom: 0;
+        width: auto;
+        margin: 0 17.5%;
       }
 
       &:nth-child(odd),
