@@ -3,7 +3,7 @@
 .navbar {
   @include padding(5rem null);
   position: relative;
-  z-index: 3;
+  z-index: 11;
 
   @include grid-media($media-lg) {
     @include padding(8.5rem null);
@@ -24,5 +24,6 @@
 
   .menu-toggle {
     float: right;
+    margin-right: 1px;
   }
 }

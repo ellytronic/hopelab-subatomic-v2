@@ -10,11 +10,19 @@
     }
   }
 
+  &.bottom {
+    padding-bottom: 12rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 15rem;
+    }
+  }
+
   .content-group,
   .video-embed,
   .inline-gallery,
   .blocks,
-  .carousel {
+  .quote-group {
     padding-bottom: 12rem;
 
     @include grid-media($media-md) {

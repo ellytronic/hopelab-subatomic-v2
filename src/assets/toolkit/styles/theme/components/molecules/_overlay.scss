@@ -34,6 +34,8 @@
 
 .overlay-toggle {
   @include position(absolute, 5rem 2.5rem null null);
+  cursor: pointer;
+  z-index: 5;
 
   @include grid-media($media-md) {
     @include position(absolute, 5rem 5rem null null);
@@ -44,9 +46,9 @@
   }
 
   svg {
-    vertical-align: middle;
     height: 2rem;
     width: 2rem;
+    vertical-align: middle;
   }
 }
 

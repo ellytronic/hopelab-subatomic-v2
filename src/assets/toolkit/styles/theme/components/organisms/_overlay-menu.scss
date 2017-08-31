@@ -4,12 +4,12 @@
 
 .overlay-menu {
   $overlay-grid-xl: (
-    columns: 12,
-    gutter: 18rem,
+    columns: 11,
+    gutter: 5rem,
   );
 
   $overlay-grid: (
-    columns: 12,
+    columns: 11,
     gutter: 5rem,
   );
 
@@ -59,11 +59,13 @@
   .overlay-menu_nav--3columns {
     .parent {
       @include grid-media($media-lg) {
-        @include grid-column(4, $overlay-grid);
-      }
+        float: left;
+        width: 30%;
+        margin-left: 6.66%;
 
-      @media (min-width: 1400px) {
-        @include grid-column(4, $overlay-grid-xl);
+        &:last-of-type {
+          width: 20%;
+        }
       }
     }
   }
@@ -75,8 +77,4 @@
       
     }
   }
-
-  // .overlay_container {
-  //   // max-width: 157.5rem;
-  // }
 }

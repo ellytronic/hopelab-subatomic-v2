@@ -9,9 +9,18 @@
     position: absolute;
     right: 0;
     bottom: 0;
+
+    svg {
+      height: 2.3rem;
+      width: 2.3rem;
+    }
   }
 
   label {
     @include sr-only-text();
+  }
+
+  ::placeholder {
+    color: color(base);
   }
 }

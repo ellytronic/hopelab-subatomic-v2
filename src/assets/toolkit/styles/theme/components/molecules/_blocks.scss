@@ -162,6 +162,8 @@
     }
 
     &:nth-child(3) {
+      clear: left;
+      
       @include grid-media($media-lg) {
         @include grid-push(4, $block-grid-lg);
       }
