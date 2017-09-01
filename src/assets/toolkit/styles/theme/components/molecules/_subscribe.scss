@@ -18,6 +18,7 @@
 
   label {
     @include sr-only-text();
+    display: none;
   }
 
   ::placeholder {

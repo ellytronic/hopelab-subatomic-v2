@@ -1,46 +1,56 @@
-@mixin center-transform (
-  $axis: false // or x or y
-) {
+@import "../../utilities/utilities";
 
-  position: absolute;
+.block-section {
+  background-color: color(grey-lightest);
+  
+  .block-section_container {
+    @include container;
+    @include padding(12rem null);
 
-  @if $axis != x {
-    top: 50%;
-    margin-top: auto;
-    margin-bottom: auto;
+    @include grid-media($media-md) {
+      @include padding(20rem null);
+    }
   }
 
-  @if $axis != y {
-    left: 50%;
-    margin-left: auto;
-    margin-right: auto;
+  .block-section_header {
+    @include grid-container;
+    padding-bottom: 12rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 15rem;
+    }
+
+    .icon-link {
+      @include h4();
+      float: right;
+    }
   }
 
-  $translate-val: null;
-
-  @if not($axis) {
-    $translate-val: translate(-50%, -50%);
-  }
-  @else if $axis != x {
-    $translate-val: translateY(-50%);
-  }
-  @else if $axis != y {
-    $translate-val: translateX(-50%);
+  .block-section_title {
+    @include h4();
+    font-family: $sans-bold-family;
+    float: left;
+    margin-bottom: 0;
+    line-height: 2.5rem;
   }
 
-  -webkit-transform: $translate-val;
-  -ms-transform: $translate-val;
-  transform: $translate-val;
-}
+  .block {
+    margin-bottom: 10rem;
 
-%center-transform {
-  @include center-transform;
-}
+    @include grid-media($media-md) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
-%center-transform-x {
-  @include center-transform(x);
-}
+    @include grid-media($media-lg) {
+      margin-bottom: 0;
+    }
 
-%center-transform-y {
-  @include center-transform(y);
+    &:nth-child(2) {
+      @include grid-media($media-lg) {
+        margin-top: 20rem;
+      }
+    }
+  }
 }

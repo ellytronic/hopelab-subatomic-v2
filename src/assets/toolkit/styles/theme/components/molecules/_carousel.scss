@@ -21,6 +21,10 @@
   width: 100%;
 }
 
+.slider-frame {
+  transition: height 0.3s;
+}
+
 .carousel_slide {
   .carousel_figure,
   .carousel_figure img {
