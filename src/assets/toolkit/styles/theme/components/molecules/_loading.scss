@@ -1,0 +1,22 @@
+@import "../../utilities/utilities";
+
+.loading {
+  @include position(absolute, 0 0 0 0);
+  background-color: color(white);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-icon {
+  display: block;
+  width: 5rem;
+}
+
+.f-container {
+  .loading {
+    @include position(relative, auto auto);
+  }
+}

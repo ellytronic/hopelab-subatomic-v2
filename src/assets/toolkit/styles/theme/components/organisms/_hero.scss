@@ -44,5 +44,10 @@
 }
 
 .hero-image {
-  margin-bottom: 10rem;
+  // Psuedo bg image
+  @include responsive-aspect-ratio();
 }
+
+// .hero-image {
+//   margin-bottom: 10rem;
+// }

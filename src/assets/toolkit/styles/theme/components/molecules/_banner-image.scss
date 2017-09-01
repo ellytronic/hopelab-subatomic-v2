@@ -8,6 +8,26 @@
   img {
     display: block;
   }
+
+  &.top {
+    padding-top: 12rem;
+
+    @include grid-media($media-md) {
+      padding-top: 15rem;
+    }
+  }
+
+  &.bottom {
+    padding-bottom: 12rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 15rem;
+    }
+  }
+
+  &.responsive {
+    @include responsive-aspect-ratio();
+  }
 }
 
 .banner-image_container {

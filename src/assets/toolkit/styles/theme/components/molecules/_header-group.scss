@@ -16,7 +16,21 @@
   }
 }
 
-.header-group_subtitle {
+.header-group_subtitle, 
+.header-group_label,
+.header-group_link {
   @include h4();
   font-family: $sans-bold-family;
+}
+
+.header-group_label {
+  margin-right: .5rem;
+}
+
+.header-group_link {
+  margin-left: .5rem;
+}
+
+.header-group_brow {
+  margin-bottom: 4rem;
 }

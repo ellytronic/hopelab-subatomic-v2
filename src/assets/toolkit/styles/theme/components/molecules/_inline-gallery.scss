@@ -94,10 +94,21 @@
       padding-top: 0;
       padding-bottom: 5rem;
 
-      &:nth-child(1),
-      &:nth-child(3) {
+      &:nth-child(1) {
         @include grid-media($media-lg) {
           @include grid-column(3, $inline-grid-tryptic);
+        }
+      }
+
+      &:nth-child(3) {
+        @include grid-media($media-md) {
+          @include grid-column(3, $inline-grid-tryptic);
+          margin-left: 24.75%;
+        }
+
+        @include grid-media($media-lg) {
+          @include grid-column(2, $inline-grid-tryptic);
+          margin-left: 15.15%;
         }
       }
 
@@ -127,14 +138,25 @@
         }
       }
 
-      &:nth-child(2),
-      &:nth-child(3) {
+      &:nth-child(2) {
          @include grid-media($media-md) {
-          margin-top: 0,
+          margin-top: 0;
         }
 
         @include grid-media($media-lg) {
           @include grid-column(3, $inline-grid-tryptic);
+          margin-top: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        @include grid-media($media-md) {
+          @include grid-column(3, $inline-grid-tryptic);
+          margin-top: 0;
+        }
+
+        @include grid-media($media-lg) {
+          @include grid-column(2, $inline-grid-tryptic);
           margin-top: 0;
         }
       }

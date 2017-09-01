@@ -16,19 +16,19 @@
   }
 
   &.bg-offset-home {
-    margin-top: -17.5rem;
+    margin-top: -10.25rem;
     padding-top: 17.5rem;
     padding-bottom: 17.5rem;
 
     @include grid-media($media-md) {
-      margin-top: -17.5rem;
+      margin-top: -9.5rem;
       padding-top: 20rem;
       padding-bottom: 20rem;
     }
 
     @include grid-media($media-lg) {
       padding-top: 20rem;
-      margin-top: -14.5rem;
+      margin-top: -9.5rem;
     }
   }
 
@@ -37,6 +37,10 @@
 
     @include grid-media($media-md) {
       margin-top: -10rem;
+    }
+
+    @include grid-media($media-lg) {
+      margin-bottom: -11rem;
     }
   }
 }
