@@ -22,7 +22,8 @@
   .video-embed,
   .inline-gallery,
   .blocks,
-  .quote-group {
+  .quote-group,
+  .slat-section {
     padding-bottom: 12rem;
 
     @include grid-media($media-md) {

@@ -3,7 +3,7 @@
 .navbar {
   @include padding(5rem null);
   position: relative;
-  z-index: 11;
+  z-index: 3;
 
   @include grid-media($media-lg) {
     @include padding(8.5rem null);

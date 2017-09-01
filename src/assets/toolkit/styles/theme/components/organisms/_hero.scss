@@ -43,6 +43,11 @@
   }
 }
 
+.hero-image {
+  // Psuedo bg image
+  @include responsive-aspect-ratio();
+}
+
 // .hero-image {
 //   margin-bottom: 10rem;
 // }

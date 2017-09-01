@@ -29,6 +29,8 @@
     @include h4();
     font-family: $sans-bold-family;
     float: left;
+    margin-bottom: 0;
+    line-height: 2.5rem;
   }
 
   .block {

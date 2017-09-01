@@ -2,7 +2,11 @@
 
 .quote-group {
   max-width: 99rem;
-  margin: 0 auto;
+  margin: 0 2.5rem;
+
+  @include grid-media($media-md) {
+    margin: 0 auto;
+  }
 
   p {
     @include h1();
@@ -11,10 +15,24 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-indent: -0.5em;
   }
 
   cite {
-    color: color(grey-light)
+    color: color(grey-light);
+  }
+}
+
+blockquote {
+  &.quote-group { 
+    p {
+      text-indent: -0.5em;
+    }
+
+    cite {
+      display: inline-block;
+      text-indent: -1em;
+      margin-left: 1em;
+      line-height: 1.6;
+    }
   }
 }

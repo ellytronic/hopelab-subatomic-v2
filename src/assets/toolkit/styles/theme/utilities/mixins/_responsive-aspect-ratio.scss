@@ -1,0 +1,28 @@
+@mixin responsive-aspect-ratio() {
+  figure {
+    @include grid-media($media-sm-below) {
+      height: 100vw;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: auto !important;
+        height: 100%;
+
+        max-height: none;
+        max-width: none;
+
+        min-height: 100%;
+        min-width: 100%;
+
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
