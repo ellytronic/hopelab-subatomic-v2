@@ -8,5 +8,7 @@
 
   @include grid-media($media-lg) {
     padding-top: 38vh;
+    // padding-top: 28vh; Should be once empty block is removed
+    // padding-top: 24.5rem; If not dynamic
   }
 }

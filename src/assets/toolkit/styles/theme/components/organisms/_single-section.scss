@@ -1,9 +1,85 @@
 @import "../../utilities/utilities";
 
 .single-section {
-  @include section-spacing();
+  // @include section-spacing();
   padding-bottom: 1px;
 
+  &.top {
+    padding-top: 12rem !important;
+
+    @include grid-media($media-md) {
+      padding-top: 15rem !important;
+    }
+  }
+
+  &.top-none {
+    padding-top: 0 !important;
+  }
+
+  &.bottom,
+  &.big-bottom {
+    .content-group,
+    .video-embed,
+    .inline-gallery,
+    .blocks,
+    .quote-group,
+    .slat-section, 
+    .banner-image {
+      padding-bottom: 12rem !important;
+
+      @include grid-media($media-md) {
+        padding-bottom: 15rem !important;
+      }
+
+      > :first-child {
+        padding-bottom: 0;
+        margin-top: 0;
+      }
+
+      > :last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .carousel {
+        margin-bottom: 12rem !important;
+
+        @include grid-media($media-md) {
+          margin-bottom: 15rem !important;
+        }
+
+        .content-group {
+          @include grid-media($media-lg) {
+            padding-bottom: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.big-bottom {
+    @include grid-media($media-md) {
+      padding-bottom: 5rem !important;
+    }
+  }
+
+  &.bottom-none {
+    .content-group,
+    .video-embed,
+    .inline-gallery,
+    .blocks,
+    .quote-group,
+    .slat-section, 
+    .banner-image {
+      padding-bottom: 0 !important;
+
+      @include grid-media($media-md) {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+
+// Delete me
   .content-group,
   .video-embed,
   .inline-gallery,
@@ -16,10 +92,20 @@
     @include grid-media($media-md) {
       padding-bottom: 15rem;
     }
+
+    > :first-child {
+      padding-bottom: 0;
+      margin-top: 0;
+    }
+
+    > :last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 
   .carousel {
-    margin-bottom: 16rem;
+    margin-bottom: 12rem;
 
     @include grid-media($media-md) {
       margin-bottom: 15rem;
@@ -31,6 +117,7 @@
       }
     }
   }
+// Stop deleting me
 
   .video-embed {
     margin-left: -2.5rem;
