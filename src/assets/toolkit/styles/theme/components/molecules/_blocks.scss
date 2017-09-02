@@ -1,60 +1,235 @@
 @import "../../utilities/utilities";
+// requires molecules/block
 
-.block {
-  a {
-    text-decoration: none;
-    color: color(base);
+.blocks {
+  $block-grid: (
+    columns: 12,
+    gutter: 6.5%,
+  );
+
+  $block-grid-lg: (
+    columns: 12,
+    gutter: 5.75%,
+  );
+
+  @include grid-container;
+
+  @include grid-media($media-md) {
+    margin-left: -6.5%;
+    margin-right: -6.5%;
   }
 
-  &.minor {
-    margin-bottom: 7.5rem;
-    
-    .block_image {
-      margin-bottom: 2rem;
+  // default three column
+  .block {
+    @include grid-media($media-md) {
+      @include grid-column(6, $block-grid-lg);
     }
 
-    .block_title {
-      @include h5();
-      font-family: $sans-bold-family;
-      margin-top: 0;
+    @include grid-media($media-lg) {
+      @include grid-column(4, $block-grid-lg);
+    }
+
+    &.expand {
+      .block_image {
+        @include grid-media($media-md) {
+          margin-top: -13%;
+          margin-left: -13%;
+          margin-right: -13%;
+        }
+
+        @include grid-media($media-lg) {
+          margin-top: -30%;
+          margin-left: -35%;
+          margin-right: -35%;
+        }
+      }
+    }
+
+    &.wide {
+      @include grid-media($media-md) {
+        @include grid-column(12, $block-grid-lg);
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(8, $block-grid-lg);
+      }
+    }
+
+    &.center {
+      @include grid-media($media-md) {
+        @include grid-column(12, $block-grid-lg);
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(9, $block-grid-lg);
+        @include grid-push(1, $block-grid-lg);
+      }
+    }
+
+    &.bg-primary-light,
+    &.bg-primary-alt-light,
+    &.bg-secondary-light {
+      @include padding(7.5rem 1rem 7.5rem 2.5rem);
+      z-index: 2;
+      position: relative;
+
+      @include grid-media($media-md) {
+        @include padding(10rem 5rem);
+      }
+    }
+
+    &.offset-top-10-md {
+      @include grid-media($media-lg) {
+        margin-top: -10rem;
+      }
+    }
+
+    &.offset-top-40-md {
+      @include grid-media($media-lg) {
+        margin-top: -40rem;
+      }
+    }
+  }
+
+  &.two-column {
+    .block {
+      @include grid-media($media-md) {
+        @include grid-column(6, $block-grid-lg);
+      }
+    }
+  }
+
+  &.four-column {
+    margin-left: -7.5%;
+    margin-right: -7.5%;
+
+    @include grid-media($media-lg) {
+      margin-left: -6.5%;
+      margin-right: -6.5%;
+    }
+
+    .block {
+      @include grid-column(6, $block-grid);
+
+      @include grid-media($media-md) {
+        @include grid-column(4, $block-grid);
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(3, $block-grid-lg);
+      }
+    }
+  }
+
+  // Adds vertical spacing offsets
+  &.blocks--steps .block {
+    padding-bottom: 10rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      @include grid-media($media-md) {
+        padding-top: 40rem;
+      }
+    }
+
+    &:nth-child(3) {
+      @include grid-media($media-lg) {
+        padding-top: 80rem;
+      }
+    }
+  }
+
+  // Adds empty cell to grid
+  &.blocks--push .block {
+    padding-bottom: 10rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      @include grid-media($media-md) {
+        padding-top: 40rem;
+        padding-bottom: 13rem;
+      }
+
+      @include grid-media($media-lg) {
+        padding-top: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      clear: left;
+
+      @include grid-media($media-lg) {
+        @include grid-push(4, $block-grid-lg);
+      }
+    }
+  }
+
+   // optional more link
+  .link-more {
+    clear: both;
+    display: block;
+    float: right;
+    padding-top: 10rem;
+    margin-right: 6.5%;
+
+    @include grid-media($media-lg) {
+      padding-top: 15rem;
+      padding-bottom: 6.5rem;
+    }
+  }
+}
+
+.block--feature .block {
+  margin-left: 0;
+
+  @include grid-media($media-md) {
+    margin-left: 16.5%;
+  }
+
+  @include grid-media($media-lg) {
+    margin-left: 8.75%;
+  }
+
+  // should be a mixin , take from waterfall blocks
+  .block_content {
+    @include padding(null 2.5rem);
+
+    @include grid-media($media-md) {
+      padding: 0;
+    }
+  }
+
+  &:nth-child(odd) .block_image {
+    @include grid-media($media-sm-below) {
+      margin-left: -2.5rem;
+      margin-right: 2.5rem;
+    }
+  }
+
+  &:nth-child(even) .block_image {
+    @include grid-media($media-sm-below) {
+      margin-right: -2.5rem;
+      margin-left: 2.5rem;
+    }
+  }
+}
+
+.block-spacing {
+  .block {
+    margin-bottom: 12rem;
+
+    @include grid-media($media-md) {
+      margin-bottom: 7rem;
+    }
+
+    &:last-child {
       margin-bottom: 0;
     }
-
-    .block_subtitle {
-      @include h5;
-      font-family: $font-sans;
-    }
   }
-}
-
-.block_image {
-  margin-bottom: 3.1rem;
-
-  img {
-    display: block;
-  }
-}
-
-.block_title {
-  @include h3();
-  line-height: 1.38;
-  font-weight: normal;
-  margin-bottom: .5rem;
-
-  a {
-    &:hover {
-      @include underline-link;
-    }
-  }
-}
-
-.block_subtext {
-  display: block;
-  font-style: italic;
-}
-
-.block_subtitle {
-  @include h5();
-  font-family: $sans-bold-family;
-  margin-top: 0;
 }

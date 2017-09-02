@@ -2,6 +2,7 @@
 
 .single-section {
   @include section-spacing();
+  padding-bottom: 1px;
 
   .content-group,
   .video-embed,
@@ -25,7 +26,9 @@
     }
 
     .content-group {
-      padding-bottom: 0;
+      @include grid-media($media-lg) {
+        padding-bottom: 0;
+      }
     }
   }
 
