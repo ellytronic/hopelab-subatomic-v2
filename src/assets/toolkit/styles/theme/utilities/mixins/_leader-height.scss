@@ -1,0 +1,12 @@
+@mixin leader-height() {
+  position: relative;
+  padding-top: 13.3rem;
+
+  @include grid-media($media-md) {
+    padding-top: 24.5rem;
+  }
+
+  @include grid-media($media-lg) {
+    padding-top: 38vh;
+  }
+}

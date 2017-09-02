@@ -1,22 +1,7 @@
 @import "../../utilities/utilities";
 
 .single-section {
-
-  &.top {
-    padding-top: 12rem;
-
-    @include grid-media($media-md) {
-      padding-top: 13rem;
-    }
-  }
-
-  &.bottom {
-    padding-bottom: 12rem;
-
-    @include grid-media($media-md) {
-      padding-bottom: 13rem;
-    }
-  }
+  @include section-spacing();
 
   .content-group,
   .video-embed,
@@ -28,7 +13,7 @@
     padding-bottom: 12rem;
 
     @include grid-media($media-md) {
-      padding-bottom: 13rem;
+      padding-bottom: 15rem;
     }
   }
 
@@ -36,7 +21,7 @@
     margin-bottom: 16rem;
 
     @include grid-media($media-md) {
-      margin-bottom: 13rem;
+      margin-bottom: 15rem;
     }
 
     .content-group {

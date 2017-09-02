@@ -1,7 +1,14 @@
 @import "../../utilities/utilities";
 
 .slat-section {
-  // margin-bottom: 20rem;
+  @include section-spacing;
+
+  // tmp should be removed once spacing dynamic
+  padding-bottom: 12rem;
+
+  @include grid-media($media-md) {
+    padding-bottom: 15rem;
+  }
 }
 
 .slat-section_header {

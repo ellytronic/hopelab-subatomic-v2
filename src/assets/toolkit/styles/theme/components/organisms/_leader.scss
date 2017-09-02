@@ -2,19 +2,18 @@
 
 .leader {
   @include navbar-offset;
+  @include section-spacing;
 
-  &.bottom {
-    padding-bottom: 12rem;
+  // tmp should be removed once spacing dynamic
+  padding-bottom: 12rem;
 
-    @include grid-media($media-md) {
-      padding-bottom: 15rem;
-    }
+  @include grid-media($media-md) {
+    padding-bottom: 15rem;
   }
 }
 
 .leader_container {
   @include grid-container;
-  // padding-bottom: 5rem;
   max-width: $text-container-width;
   margin: 0 auto;
 }
@@ -64,7 +63,7 @@
 
     .leader_column {
       &:first-child {
-        @include cover-height;
+        @include leader-height;
         align-items: flex-end; 
         display: flex;
         padding-top: 12rem;
