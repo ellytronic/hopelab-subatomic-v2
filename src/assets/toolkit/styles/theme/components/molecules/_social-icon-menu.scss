@@ -9,6 +9,12 @@
       margin-left: 0;
     }
 
+    &:last-child {
+      svg {
+        bottom: -4px;
+      }
+    }
+
     span {
       @include sr-only-text();
     }

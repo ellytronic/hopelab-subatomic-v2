@@ -3,26 +3,27 @@
 // requires molecules/full-image
 
 .banner-image {
+  @include section-spacing;
   position: relative;
 
-  img {
-    display: block;
+  &.top-none {
+    padding-top: 0 !important;
+  }
+
+  &.bottom-none {
+    padding-bottom: 0 !important;
   }
 
   &.top {
-    padding-top: 12rem;
+    padding-top: 12rem !important;
 
     @include grid-media($media-md) {
-      padding-top: 15rem;
+      padding-top: 15rem !important;
     }
   }
 
-  &.bottom {
-    padding-bottom: 12rem;
-
-    @include grid-media($media-md) {
-      padding-bottom: 15rem;
-    }
+  img {
+    display: block;
   }
 
   &.responsive {

@@ -20,9 +20,21 @@
 .content-title {
   @include h1()
   margin-bottom: 5rem;
+
+  &.minor {
+    @include h4()
+    font-family: $sans-bold-family;
+    margin-bottom: 3rem;
+  }
 }
 
 .content-subtitle {
+  @include h4()
   font-family: $sans-bold-family;
   margin-bottom: 4rem;
+
+  &.minor {
+    color: color(grey-light);
+    margin-bottom: 7.5rem;
+  }
 }

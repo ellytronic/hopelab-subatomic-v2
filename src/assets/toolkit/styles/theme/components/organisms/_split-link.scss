@@ -9,12 +9,22 @@
   }
 
   // Add variant classes for background color shift
-  &.primary-alt {
+  &.primary {
     .split-link_action a {
-      background-color: color(primary-alt);
+      background-color: color(primary);
 
       &:hover {
-        background-color: darken(color(primary-alt), 10%);
+        background-color: color(primary-dark);
+      }
+    }
+  }
+
+  &.primary-alt {
+    .split-link_action a {
+      background-color: color(primary-alt-dark);
+
+      &:hover {
+        background-color: color(primary-alt-darker);
       }
     }
   }
@@ -24,7 +34,7 @@
       background-color: color(secondary);
 
       &:hover {
-        background-color: darken(color(secondary), 10%);
+        background-color: color(secondary-dark);
       }
     }
   }

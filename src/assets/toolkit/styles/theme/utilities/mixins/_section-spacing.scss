@@ -1,0 +1,17 @@
+@mixin section-spacing() {
+  &.bottom {
+    padding-bottom: 12rem !important;
+
+    @include grid-media($media-md) {
+      padding-bottom: 15rem !important;
+    }
+  }
+
+  &.big-bottom {
+    padding-bottom: 12rem !important;
+
+    @include grid-media($media-md) {
+      padding-bottom: 20rem !important;
+    }
+  }
+}

@@ -3,7 +3,6 @@
 .overlay {
   @include position(absolute, 0 0 0 0);
   z-index: 2;
-
   background-color: color(warm-grey);
   width: 100%;
 
@@ -20,6 +19,7 @@
 
 .overlay_container {
   @include container;
+  background-color: color(warm-grey);
   padding-top: 16.5rem;
   max-width: 157.5rem;
 

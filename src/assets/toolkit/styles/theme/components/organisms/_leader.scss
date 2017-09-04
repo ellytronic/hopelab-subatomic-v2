@@ -2,19 +2,15 @@
 
 .leader {
   @include navbar-offset;
+  @include section-spacing;
 
-  &.bottom {
-    padding-bottom: 12rem;
-
-    @include grid-media($media-md) {
-      padding-bottom: 15rem;
-    }
+  &.bottom-none {
+    padding-bottom: 0 !important;
   }
 }
 
 .leader_container {
   @include grid-container;
-  // padding-bottom: 5rem;
   max-width: $text-container-width;
   margin: 0 auto;
 }
@@ -64,7 +60,7 @@
 
     .leader_column {
       &:first-child {
-        @include cover-height;
+        @include leader-height;
         align-items: flex-end; 
         display: flex;
         padding-top: 12rem;
@@ -80,10 +76,11 @@
       }
 
       &:last-child {
-        padding-top: 10rem;
+        padding-top: 12rem;
         margin-left: 5rem;
 
         @include grid-media($media-md) {
+          padding-top: 15rem;
           @include grid-push(1, $leader-grid-md);
         }
 
@@ -94,9 +91,17 @@
     }
   }
 
+  .leader_header {
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .quote-group {
     p {
-      margin-bottom: 0;
+      margin: 0;
     }
   }
 }
@@ -124,6 +129,8 @@
 }
 
 .leader-feature {
+  padding-bottom: 0;
+  
   .leader_container {
     max-width: 134rem;
     margin: 0;
@@ -169,6 +176,11 @@
   }
 
   h1 {
-    @include h2()
+    @include h2();
+    line-height: 1.42;
+
+    @include grid-media($media-md) {
+      font-size: 3rem;
+    }
   }
 }

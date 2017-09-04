@@ -1,27 +1,53 @@
 @import "../../utilities/utilities";
 
 .slat-section {
-  // margin-bottom: 20rem;
+  @include section-spacing;
+
+  // tmp should be removed once spacing dynamic
+  padding-bottom: 12rem;
+
+  @include grid-media($media-md) {
+    padding-bottom: 15rem;
+  }
 }
 
 .slat-section_header {
-  @include h5();
+  @include h4();
   font-family: $sans-bold-family;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 }
 
 .slats {
   @include unstyled-list;
-  border-top: 1px solid color(base);
+  border-top: 1px solid rgba(0,0,0,.3);
 }
 
 .slat {
   @include grid-container;
-  @include padding(2rem null);
-  border-bottom: 1px solid color(base);
+  @include padding(4rem null);
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  position: relative;
 
   a {
+    @include h3();
+    line-height: 1.375;
     display: block;
+    margin-bottom: 1.5rem;
+
+    @include grid-media($media-md) {
+      display: inline-block;
+      float: left;
+      margin: 0;
+      width: 75%;
+    }
+
+    @include grid-media($media-lg) {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      @include underline-link;
+    }
   }
 }
 
@@ -32,10 +58,12 @@
 .slat_subtitle {
   font-family: $sans-bold-family;
   font-size: 1.6rem;
-  display: block;
-
-  @include grid-media($media-lg) {
+  
+  @include grid-media($media-md) {
+    @include center-transform(y);
+    right: 0;
     float: right;
+    display: block;
   }
 }
 

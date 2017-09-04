@@ -29,6 +29,25 @@
     @include grid-media($media-lg) {
       @include grid-column(6, $text-grid-lg);
     }
+
+    figure {
+      padding-bottom: 12rem;
+
+      @include grid-media($media-lg) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .content-subtitle {
+    &.bottom {
+      padding-bottom: 12rem;
+      margin-bottom: 0;
+
+      @include grid-media($media-md) {
+        padding-bottom: 15rem;
+      }
+    }
   }
 
   &.has-offset {
@@ -51,14 +70,15 @@
     .text-section_column {
       .quote-group {
         margin-left: 5rem;
-        margin-bottom: 10rem;
       }
 
       @include grid-media($media-md) {
         @include grid-column(6, $text-grid-md);
         
         .quote-group {
-          margin-bottom: 15rem;
+          p {
+            margin: 0;
+          }
         }
       }
 
@@ -69,6 +89,7 @@
       }
 
       &:first-child {
+
         @include grid-media($media-lg) {
           @include grid-column(7, $text-grid-lg);
 

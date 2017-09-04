@@ -43,14 +43,14 @@
       padding-bottom: 5rem;
 
       @include grid-media($media-md) {
-        padding-bottom: 7.5rem;
+        padding-bottom: 6rem;
       }
 
       > a {
         padding-bottom: 2.5rem;
 
         @include grid-media($media-lg) {
-          padding-bottom: 7.5rem;
+          padding-bottom: 6rem;
         }
       }
     }
