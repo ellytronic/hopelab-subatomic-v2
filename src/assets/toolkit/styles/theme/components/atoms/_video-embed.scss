@@ -1,5 +1,15 @@
 @import "../../utilities/utilities";
 
-// .video-embed {
-  
-// }
+.video-embed {
+	position: relative;
+}
+
+.responsive-embed-overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 3;
+	cursor: pointer;
+}
