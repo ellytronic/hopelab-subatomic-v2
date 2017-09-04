@@ -20,3 +20,14 @@
     @include position(relative, auto auto);
   }
 }
+
+.loading-small {
+  text-align: center;
+  height: 0px;
+}
+
+.loading-small img {
+  display: inline-block;
+  position: relative;
+  top: 40px;
+}
