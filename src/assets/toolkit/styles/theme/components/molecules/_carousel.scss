@@ -3,6 +3,10 @@
 .carousel {
   position: relative;
 
+  @include grid-media($media-sm-below) {
+    @include full-container;
+  }
+
   &.full {
     @include clearfix;
 
@@ -28,33 +32,56 @@
 .carousel_slide {
   .carousel_figure,
   .carousel_figure img {
-    width: 100%;
-    max-width: none;
-    display: block;
+    @include grid-media($media-sm-below) {
+      @include full-container;
+      max-width: none;
+    }
+
+    @include grid-media($media-md) {
+      width: 100%;
+      max-width: none;
+      display: block;
+    }
+  }
+
+  .carousel_figure img {
+    padding-bottom: 8.5rem;
+  }
+
+  .text-section {
+    img {
+      width: auto;
+      max-width: 100%;
+    }
   }
 }
 
 .carousel_caption {
-  @include position(absolute, null null -6rem 0);
+  @include position(absolute, null null -1rem 0)
+  padding: 0;
   font-family: $font-serif;
   font-size: 1.3rem;
   float: left;
-  padding: 0;
+  margin: 0;
+  height: 7.5rem;
+
+  @include grid-media($media-sm-below) {
+    padding-left: 2.5rem;
+  }
 
   @include grid-media($media-md) {
-    @include position(relative, null null auto auto);
+    @include position(absolute, null null -2rem 0);
     font-size: 1.4rem;
-    padding-top: 3rem;
+    margin-right: 14.5rem;
   }
 }
 
 .carousel_controls {
-  @include position(absolute, null null 2.5rem 0);
+  @include position(absolute, null null 10.5rem 2.5rem);
 
   @include grid-media($media-md) {
-    @include position(relative, null null auto auto);
+    @include position(absolute, null 0 2.5rem auto);
     float: right;
-    padding-top: 3rem;
   }
 
   svg {

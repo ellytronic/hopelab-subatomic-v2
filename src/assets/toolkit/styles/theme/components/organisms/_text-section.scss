@@ -40,11 +40,13 @@
   }
 
   .content-subtitle {
-    padding-bottom: 12rem;
-    margin-bottom: 0;
+    &.bottom {
+      padding-bottom: 12rem;
+      margin-bottom: 0;
 
-    @include grid-media($media-md) {
-      padding-bottom: 15rem;
+      @include grid-media($media-md) {
+        padding-bottom: 15rem;
+      }
     }
   }
 

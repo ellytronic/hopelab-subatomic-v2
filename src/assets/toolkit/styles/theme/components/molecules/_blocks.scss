@@ -19,6 +19,22 @@
     margin-right: -6.5%;
   }
 
+  .blocks_header {
+    padding-bottom: 12rem;
+
+    @include grid-media($media-md) {
+      padding-bottom: 15rem;
+    }
+
+    .blocks_title {
+      &.minor {
+        @include h4();
+        font-family: $sans-bold-family;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   // default three column
   .block {
     @include grid-media($media-md) {
