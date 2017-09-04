@@ -14,6 +14,14 @@
     padding-bottom: 0 !important;
   }
 
+  &.top {
+    padding-top: 12rem !important;
+
+    @include grid-media($media-md) {
+      padding-top: 15rem !important;
+    }
+  }
+
   img {
     display: block;
   }

@@ -4,12 +4,9 @@
   @include navbar-offset;
   @include section-spacing;
 
-  // tmp should be removed once spacing dynamic
-  // padding-bottom: 12rem;
-
-  // @include grid-media($media-md) {
-  //   padding-bottom: 15rem;
-  // }
+  &.bottom-none {
+    padding-bottom: 0 !important;
+  }
 }
 
 .leader_container {

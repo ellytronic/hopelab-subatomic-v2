@@ -13,6 +13,12 @@
     .carousel_figure {
       @include full-container;
     }
+
+    .carousel_caption {
+      @include grid-media($media-md) {
+        left: 10rem;
+      }
+    }
   }
 }
 
