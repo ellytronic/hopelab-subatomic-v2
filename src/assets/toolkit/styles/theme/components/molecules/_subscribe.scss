@@ -8,12 +8,18 @@
   .icon-only-button {
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0;
+    height: 4.2rem;
 
     svg {
       height: 2.3rem;
       width: 2.3rem;
     }
+  }
+
+  input {
+    line-height: normal;
+    margin: 0;
   }
 
   label {
@@ -24,4 +30,9 @@
   ::placeholder {
     color: color(base);
   }
+}
+
+.subscribe-error {
+  color: color(error);
+  padding-top: 2rem;
 }
