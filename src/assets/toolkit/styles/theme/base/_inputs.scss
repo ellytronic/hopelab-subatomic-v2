@@ -10,7 +10,7 @@ select {
   color: $input-color; // standardize on firefox
   display: block;
   min-height: $input-height;
-  line-height: $input-line-height;
+  line-height: normal;
   margin: 0.2em 0;
   max-width: $input-max-width;
   outline: none;
