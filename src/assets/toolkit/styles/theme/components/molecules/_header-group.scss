@@ -13,6 +13,11 @@
   @include grid-media($media-lg) {
     @include grid-column(7);
     @include center-column;
+
+    &.header-group--spaced {
+      @include grid-column(6);
+      @include center-column;
+    }
   }
 }
 
@@ -33,4 +38,20 @@
 
 .header-group_brow {
   margin-bottom: 4rem;
+}
+
+.header-group_chin {
+
+}
+
+.header-group--spaced {
+  .header-group_title,
+  .header-group_subtitle {
+    margin-bottom: 5.5rem;
+  }
+
+  .header-group_subtitle {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }

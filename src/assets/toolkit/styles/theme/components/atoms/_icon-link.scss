@@ -12,3 +12,7 @@
     top: -1px;
   }
 }
+
+.icon-link--big {
+  @include h4();
+}
