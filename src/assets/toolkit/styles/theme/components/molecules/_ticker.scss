@@ -1,0 +1,20 @@
+
+.ticker {
+	text-align: center;
+}
+
+.ticker_link {
+	font-size: 0.89em;
+}
+
+.ticker_date {
+	&:after {
+		content: ' — ';
+		margin-left: 0.3em;
+		margin-right: 0.3em;
+	}
+}
+
+.ticker_text {
+	color: color(grey);
+}

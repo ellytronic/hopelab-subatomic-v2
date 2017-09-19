@@ -42,6 +42,17 @@
     float: right;
     margin-right: 1px;
   }
+
+  .ticker {
+    position: absolute;
+    width: 100%;
+    top: 0.3em;
+
+    .ticker_link {
+      position: relative;
+      left: -8%;
+    }
+  }
 }
 
 body {
