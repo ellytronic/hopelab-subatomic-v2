@@ -68,6 +68,20 @@
     display: block;
   }
 
+}
+
+.slat-container--multiple-subtitles {
+  .slat {
+    a {
+      @include grid-media($media-md) {
+        width: 75%;
+      }
+      @include grid-media($media-lg) {
+        width: 65%;
+      }
+    }
+  }
+
   .slat_subtitle {
     margin-right: 30px;
 
@@ -86,21 +100,8 @@
         right: 13vw;
       }
     }
-
   }
-}
-
-.slat-container--multiple-subtitles {
-  .slat {
-    a {
-      @include grid-media($media-md) {
-        width: 75%;
-      }
-      @include grid-media($media-lg) {
-        width: 65%;
-      }
-    }
-  }
+  
 }
 
 .slat-section_footer {
