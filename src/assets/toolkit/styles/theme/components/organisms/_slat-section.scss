@@ -55,7 +55,9 @@
   font-family: $font-serif;
 }
 
-.slat_subtitle {
+.slat_subtitles {
+  margin: 0px;
+  padding: 0px;
   font-family: $sans-bold-family;
   font-size: 1.6rem;
   
@@ -64,6 +66,40 @@
     right: 0;
     float: right;
     display: block;
+  }
+
+  .slat_subtitle {
+    margin-right: 30px;
+
+    @include grid-media($media-md) {
+      margin-right: 0;
+      display: block;
+      text-align: right;
+    }
+  
+    @include grid-media($media-lg) {
+      display: inline-block;
+
+      &:first-child {
+        white-space: nowrap;
+        position: absolute;
+        right: 13vw;
+      }
+    }
+
+  }
+}
+
+.slat-container--multiple-subtitles {
+  .slat {
+    a {
+      @include grid-media($media-md) {
+        width: 75%;
+      }
+      @include grid-media($media-lg) {
+        width: 65%;
+      }
+    }
   }
 }
 
