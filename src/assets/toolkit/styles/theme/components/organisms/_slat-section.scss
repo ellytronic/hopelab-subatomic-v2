@@ -63,11 +63,23 @@
   
   @include grid-media($media-md) {
     @include center-transform(y);
+    max-width: 23%;
     right: 0;
     float: right;
     display: block;
+    text-align: right;
   }
 
+}
+
+.slat_subtitle {
+  &:after {
+    content:', ';
+  }
+
+  &:last-child:after {
+    display: none;
+  }
 }
 
 .slat-container--multiple-subtitles {
@@ -98,6 +110,10 @@
         white-space: nowrap;
         position: absolute;
         right: 13vw;
+
+        &:after {
+          display: none;
+        }
       }
     }
   }
