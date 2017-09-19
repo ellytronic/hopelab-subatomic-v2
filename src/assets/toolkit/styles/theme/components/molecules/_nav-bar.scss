@@ -3,7 +3,23 @@
 .navbar {
   @include padding(5rem null);
   position: relative;
-  z-index: 3;
+  z-index: 4;
+
+  top: 0px;
+  width: 100%;
+  background: white;
+  position: fixed;
+
+  transition: all 0.5s;
+
+  &.closed {
+    transform: translateY(-100%);
+  }
+
+  &.compact {
+    @include padding(5rem null);
+    background-color: color(warm-grey);
+  }
 
   @include grid-media($media-lg) {
     @include padding(8.5rem null);
@@ -25,5 +41,13 @@
   .menu-toggle {
     float: right;
     margin-right: 1px;
+  }
+}
+
+body {
+  margin-top: 133px;
+
+  @include grid-media($media-lg) {
+    margin-top: 194px;
   }
 }
