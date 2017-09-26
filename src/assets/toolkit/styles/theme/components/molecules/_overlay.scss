@@ -36,6 +36,7 @@
   @include position(absolute, 5rem 2.5rem null null);
   cursor: pointer;
   z-index: 5;
+  opacity: 0.3;
 
   @include grid-media($media-md) {
     @include position(absolute, 5rem 5rem null null);
@@ -56,5 +57,31 @@
   .overlay_container {
     padding-top: 15rem;
     max-width: 130rem;
+  }
+}
+
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
+.ReactModal__Content {
+  overflow-y: scroll !important;
+  background-color: color(warm-grey) !important;
+
+  .logo {
+    @include position(absolute, 5rem null null 2.5rem);
+    z-index: 5;
+    margin-left: -1px;
+    margin-top: -1px;
+    opacity: 0.3;
+
+    @include grid-media($media-md) {
+      @include position(absolute, 5rem null null 5rem);
+    }
+
+    @include grid-media($media-lg) {
+      @include position(absolute, 8.5rem null null 10rem);
+    }
   }
 }
