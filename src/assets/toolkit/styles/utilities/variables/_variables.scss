@@ -4,12 +4,12 @@
 
 // Bourbon with custom settings.
 @import 'variables-bourbon';
-@import 'bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon/app/assets/stylesheets/bourbon';
 
 // Neat with custom settings.
 @import 'variables-neat';
-@import 'bourbon-neat/core/neat';
-@import 'neat-omega/neat-omega';
+@import '~bourbon-neat/core/neat';
+@import '~neat-omega/neat-omega';
 
 // Base settings.
 @import 'typography';
